@@ -9,7 +9,7 @@ export default function App() {
       <Properties />
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>

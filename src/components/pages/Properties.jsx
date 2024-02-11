@@ -30,10 +30,10 @@ export default function Properties() {
 
   return (
     <div
-      className=" w-screen h-screen z-0 fixed"
+      className=" w-screen h-screen  fixed "
       style={{ backgroundColor: "#EB8B2E" }}
     >
-      <div className=" flex flex-row">
+      <div className=" flex flex-row z-0 relative">
         <div className=" bg-white w-1/5 h-screen"></div>
         <div className=" flex flex-col w-4/5">
           <div className=" flex flex-row justify-between text-black text-xl font-medium h-40 p-6">
@@ -41,7 +41,7 @@ export default function Properties() {
             <div className=" mt-1">
               <div className=" w-7 flex flex-col justify-start items-center text-sm">
                 <GoDotFill className=" text-white mb-8 w-8 rotate-90 text-2xl" />
-                <span className="propertiesMark  w-26  rotate-90">
+                <span className="propertiesMark top-20 w-96  rotate-90 z-1 absolute">
                   PROPERTIES
                 </span>
               </div>
