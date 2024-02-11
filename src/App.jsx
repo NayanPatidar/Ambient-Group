@@ -5,10 +5,8 @@ import Properties from "./components/pages/Properties";
 
 export default function App() {
   return (
-    <div className=" bg-orange-400">
-      <div className="background-container">
-          <Properties />
-      </div>
+    <div className="background-container z-0">
+      <Properties />
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Home />} /> */}

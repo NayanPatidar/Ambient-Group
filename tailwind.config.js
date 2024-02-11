@@ -11,6 +11,7 @@ export default {
       fontWeight: {
         thin: 300,
         medium: 400,
+        semidark: 500,
       }
     },
   },

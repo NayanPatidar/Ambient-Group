@@ -17,7 +17,7 @@ const TopPage = () => {
   }, []);
 
   return (
-    <div className=" w-11/12 bg-white">
+    <div className=" w-11/12 bg-white z-1 absolute">
       <div
         className="  flex flex-col justify-between bg-cover bg-center h-screen "
         style={{
@@ -145,8 +145,6 @@ const TopPage = () => {
             </div>
           </div>
         </div>
-
-        
         {/* First Three  */}
         <div className=" flex flex-row justify-between mt-28">
           <div className=" flex flex-row justify-around ml-12">
