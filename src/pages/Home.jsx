@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GoArrowDown } from "react-icons/go";
-import Navbar from "../navbar/nav";
+import Navbar from "../components/navbar/nav";
 
 const TopPage = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);

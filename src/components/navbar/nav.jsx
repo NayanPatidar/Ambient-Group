@@ -1,6 +1,5 @@
 import React from "react";
-import { GoChevronDown } from "react-icons/go";
-import "./nav.css";
+import "../../styles/nav.css";
 
 const Navbar = () => {
   return (
@@ -17,7 +16,7 @@ const Navbar = () => {
             </li>
             <li>
               <a className="navTags"  href="#">ABOUT</a>
-            </li>
+            </li> 
             <li>
               <a className="navTags" href="#">CONTACT</a>
             </li>
