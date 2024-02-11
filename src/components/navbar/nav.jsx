@@ -13,16 +13,16 @@ const Navbar = () => {
         <div className=" text-white mr-10">
           <ul className="flex flex-row space-x-4 gap-10 items-center">
             <li className="">
-              <a href="#">INVESTORS</a>
+              <a className="navTags" href="#">INVESTORS</a>
             </li>
             <li>
-              <a href="#">ABOUT</a>
+              <a className="navTags"  href="#">ABOUT</a>
             </li>
             <li>
-              <a href="#">CONTACT</a>
+              <a className="navTags" href="#">CONTACT</a>
             </li>
             <li>
-              <a href="#">AVAILABLE SPACE </a>
+              <a className="navTags" href="#">AVAILABLE SPACE </a>
             </li>
           </ul>
         </div>

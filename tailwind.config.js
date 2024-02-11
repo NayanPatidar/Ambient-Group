@@ -6,10 +6,11 @@ export default {
   ],  theme: {
     extend: {
       fontFamily: {
-        body: ['Space Grotesk']
+        body: ['M PLUS Rounded 1c']
       },
       fontWeight: {
         thin: 300,
+        medium: 400,
       }
     },
   },
