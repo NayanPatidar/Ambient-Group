@@ -35,11 +35,11 @@
   transition: 300ms;
 }
 
-.propertiesMark:hover:after {
+.propertiesMark.GetUnderline:after {
   width: 100%;
 }
 
-.propertiesMark:not(:hover):after {
+.propertiesMark:not(.GetUnderline):after {
   right: 0;
   left: auto;
 }

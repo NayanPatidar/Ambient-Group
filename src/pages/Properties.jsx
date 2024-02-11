@@ -49,7 +49,7 @@ export default function Properties() {
             <div className=" mt-1">
               <div className=" w-7 flex flex-col justify-start items-center text-sm">
                 <GoDotFill className=" text-white mb-8 w-8 rotate-90 text-2xl" />
-                <span className="propertiesMark  w-26  rotate-90">
+                <span className={`propertiesMark w-26  rotate-90 ${IsMouseOver ? "GetUnderline" : ""}`}>
                   PROPERTIES
                 </span>
               </div>
