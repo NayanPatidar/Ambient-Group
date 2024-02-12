@@ -24,6 +24,10 @@
   transform-origin: bottom left;
 }
 
+.propertiesMark {
+  cursor: pointer;
+}
+
 .propertiesMark:after {
   content: "";
   width: 0px;
