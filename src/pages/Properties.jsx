@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import "../styles/listProperties.css";
 
-export default function Properties({ isMouseOver }) {
+export default function Properties({ isMouseOver, isMouseClicked }) {
   const [selectedItem, setSelectedItem] = useState("ALL");
   const [selectedTypeProperty, setTypeProperty] = useState("ALL PROPERTIES");
 
@@ -32,21 +32,26 @@ export default function Properties({ isMouseOver }) {
 
   return (
     <div
-      className="MainProperty w-screen h-screen  fixed"
-      style={{ backgroundColor: "#EB8B2E" }}
+      className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll z-50"
+      style={{
+        backgroundColor: isMouseClicked ? "#EB8B2E" : "black",
+        transition: "background-color 0.3s ease",
+      }}
     >
       <div className=" flex flex-row ">
-        <div className=" bg-white w-1/5 h-screen"></div>
+        <div
+          className=" w-1/5 h-screen"
+          style={{ backgroundColor: "#EB8B2E" }}
+        ></div>
         <div className="MainPropertyData flex flex-col w-4/5">
-          <div className=" flex flex-row justify-between text-black text-xl font-medium h-40 p-6">
+          <div className=" flex flex-row justify-between text-black text-xl font-medium h-40 pl-10 pt-8">
             <div className=" w-11/12 ">OUR PROPERTIES</div>
             <div className=" mt-1">
-              <div className=" w-7 flex flex-col justify-start items-center text-sm mr-2  ">
-                <GoDotFill className=" text-white mb-8 w-8 rotate-90 text-2xl" />
+              <div className="PropHeadingDetails w-7 flex flex-col justify-start items-center text-sm mr-8  ">
+                <GoDotFill className=" mb-8 w-8 rotate-90 text-2xl" />
                 <span
                   className={`propertiesMark w-26  rotate-90 
                   ${isMouseOver ? "GetUnderline" : ""}
-                  
                   `}
                 >
                   PROPERTIES
@@ -55,7 +60,7 @@ export default function Properties({ isMouseOver }) {
             </div>
           </div>
 
-          <div className=" h-28 flex flex-col gap-4 text-md font-semidark">
+          <div className=" h-28 flex flex-col gap-4 text-md font-semidark p-6">
             <div className=" pl-5">
               <ul
                 className="flex flex-row gap-8"

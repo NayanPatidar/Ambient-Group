@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Properties from "./pages/Properties.jsx";
+import "./App.css"
 
 export default function App() {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -29,7 +30,7 @@ export default function App() {
         onMouseLeave={handleMouseLeave}
         onClick={handleMouseClick}
       >
-        <Properties isMouseOver={isMouseOver} />
+        <Properties isMouseOver={isMouseOver} isMouseClicked={isMouseClicked} />
       </div>
       <BrowserRouter>
         <Routes>

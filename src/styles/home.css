@@ -1,5 +1,5 @@
 .MainHome {
-  transition: transform 1s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .left-onHover {
@@ -8,13 +8,12 @@
 
 .left-HideOn {
   transform: translateX(-79%);
-  opacity: 0..8;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .left-HideOff {
   width: 1200px;
 }
-
 
 .MainBackground {
   animation: change 30s infinite ease-in;
@@ -80,4 +79,3 @@
     transform: translateY(0%);
   }
 }
-

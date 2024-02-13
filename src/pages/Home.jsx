@@ -4,19 +4,20 @@ import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer/Footer";
 
 const TopPage = ({ isMouseOver, isMouseClicked }) => {
+
   return (
     <div
-      className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute 
-        ${isMouseOver && !isMouseClicked ? "left-onHover" : ""}
+      className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute
+         ${isMouseOver ? "left-onHover" : ""}
         ${isMouseClicked ? "left-HideOn" : "left-HideOff"}`}
     >
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
 
-        <div className="line font-body font-thin text-white  text-6xl w-4/6 pl-8">
+        <div className="line font-body font-thin text-white  text-6xl w-4/6 pl-8 ">
           <h2 className="lineUp">
             BUILDING TOMORROW, INVESTING IN YOUR FUTURE: REDEFINING REAL ESTATE
             WITH AMBIANCE AND INNOVATION.
