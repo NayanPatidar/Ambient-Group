@@ -12,13 +12,19 @@ const Navbar = () => {
         <div className=" text-white mr-10">
           <ul className="flex flex-row space-x-4 gap-10 items-center">
             <li className="">
-              <a className="navTags" href="#">INVESTORS</a>
+              <a className="navTags" href="#">
+                INVESTORS
+              </a>
             </li>
             <li>
-              <a className="navTags"  href="#">ABOUT</a>
-            </li> 
+              <a className="navTags" href="#">
+                ABOUT
+              </a>
+            </li>
             <li>
-              <a className="navTags" href="#">CONTACT</a>
+              <a className="navTags" href="#">
+                CONTACT
+              </a>
             </li>
           </ul>
         </div>

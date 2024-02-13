@@ -22,6 +22,14 @@ export default function Properties({ isMouseOver }) {
   const itemsTypes = ["ALL PROPERTIES", "COMMERCIAL", "RESIDENTIAL"];
   console.log(isMouseOver);
 
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
+  const handlePropertyTypeClick = (type) => {
+    setTypeProperty(type);
+  };
+
   return (
     <div
       className="MainProperty w-screen h-screen  fixed"
@@ -36,9 +44,10 @@ export default function Properties({ isMouseOver }) {
               <div className=" w-7 flex flex-col justify-start items-center text-sm mr-2  ">
                 <GoDotFill className=" text-white mb-8 w-8 rotate-90 text-2xl" />
                 <span
-                  className={`propertiesMark w-26  rotate-90 ${
-                    isMouseOver ? "GetUnderline" : ""
-                  }`}
+                  className={`propertiesMark w-26  rotate-90 
+                  ${isMouseOver ? "GetUnderline" : ""}
+                  
+                  `}
                 >
                   PROPERTIES
                 </span>
