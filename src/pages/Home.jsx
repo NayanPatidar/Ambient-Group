@@ -2,23 +2,12 @@ import React, { useEffect, useState } from "react";
 import { GoArrowDown } from "react-icons/go";
 import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TopPage = ({ isMouseOver }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const triggerPoint = 200;
-    setIsVisible(scrollY > triggerPoint);
-  };
-
-  console.log(isVisible);
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    AOS.refresh(); // Refresh AOS after rendering your component
   }, []);
 
   return (
@@ -63,10 +52,10 @@ const TopPage = ({ isMouseOver }) => {
         </button>
       </div>
 
-      <div className={`flex flex-col w-11/12 mt-16 } `}>
+      <div className="flex flex-col w-11/12">
         {/* First Row  */}
         <div className=" flex flex-row justify-between">
-          <div className=" flex flex-row justify-around">
+          <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
@@ -87,7 +76,7 @@ const TopPage = ({ isMouseOver }) => {
             </div>
           </div>
 
-          <div className=" flex flex-row justify-around">
+          <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
@@ -109,7 +98,7 @@ const TopPage = ({ isMouseOver }) => {
         </div>
         {/* Second Row  */}
         <div className=" flex flex-row justify-between mt-28">
-          <div className=" flex flex-row justify-around">
+          <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
@@ -129,7 +118,7 @@ const TopPage = ({ isMouseOver }) => {
             </div>
           </div>
 
-          <div className=" flex flex-row justify-around">
+          <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
@@ -152,7 +141,7 @@ const TopPage = ({ isMouseOver }) => {
         </div>
         {/* Third Row  */}
         <div className=" flex flex-row justify-between mt-28">
-          <div className=" flex flex-row justify-around">
+          <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
@@ -173,7 +162,7 @@ const TopPage = ({ isMouseOver }) => {
             </div>
           </div>
 
-          <div className=" flex flex-row justify-around">
+          <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>

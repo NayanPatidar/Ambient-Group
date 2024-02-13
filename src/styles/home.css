@@ -38,10 +38,6 @@
   filter: brightness(60%);
 }
 
-.animate-up {
-  transform: translateY(-50px);
-}
-
 .line {
   width: 100%;
   height: 20rem;
