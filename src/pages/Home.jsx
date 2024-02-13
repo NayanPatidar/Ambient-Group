@@ -6,10 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const TopPage = ({ isMouseOver }) => {
-  useEffect(() => {
-    AOS.refresh(); // Refresh AOS after rendering your component
-  }, []);
-
   return (
     <div
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute ${
@@ -34,7 +30,7 @@ const TopPage = ({ isMouseOver }) => {
         </div>
       </div>
 
-      <div className=" 11/12 flex flex-col p-16">
+      <div data-aos="fade-up" className=" 11/12 flex flex-col p-16">
         <div className="text-4xl text-medium w-3/5 tracking-wider leading-relaxed">
           Discover transformative real estate investments in{" "}
           <a className="text-orange-400">Indore</a> with{" "}
@@ -184,7 +180,10 @@ const TopPage = ({ isMouseOver }) => {
         </div>{" "}
       </div>
 
-      <div className=" flex flex-row justify-around h-96 w-full mt-56 border-t border-black pt-16">
+      <div
+        data-aos="fade-up"
+        className=" flex flex-row justify-around h-96 w-full mt-56 border-t border-black pt-16"
+      >
         <div className="w-1/4 h-80 text-center ">WHAT THEY SAY</div>
         <div className="w-1/4 h-72 border-l border-black text-xl pl-5 font-serif flex flex-col justify-between">
           <p>

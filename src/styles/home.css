@@ -3,7 +3,7 @@
 }
 
 .MainBackground {
-  animation: change 30s infinite ease-in-out;
+  animation: change 30s infinite ease-in;
 }
 
 @keyframes change {
