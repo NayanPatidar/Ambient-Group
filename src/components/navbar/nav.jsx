@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navigation-bar">
       <div className="flex flex-row justify-between items-center mt-8 pl-8">
         <div className="text-white text-2xl font-thin pl-1">
-          <span className=" font-bold">AMBIENT</span> INTERIORS
+          <span className=" font-bold">AMBIENT</span> GROUP
         </div>
 
         <div className=" text-white mr-10">
@@ -19,9 +19,6 @@ const Navbar = () => {
             </li> 
             <li>
               <a className="navTags" href="#">CONTACT</a>
-            </li>
-            <li>
-              <a className="navTags" href="#">AVAILABLE SPACE </a>
             </li>
           </ul>
         </div>

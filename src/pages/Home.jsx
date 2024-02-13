@@ -4,17 +4,21 @@ import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
 
 const TopPage = ({ isMouseOver }) => {
-  const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
-  const images = [
-    "/public/images/HomePage/Two.jpg",
-    "/public/images/HomePage/One.jpg",
-    "/public/images/HomePage/Three.jpg",
-  ];
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const triggerPoint = 200;
+    setIsVisible(scrollY > triggerPoint);
+  };
+
+  console.log(isVisible);
 
   useEffect(() => {
-    setInterval(() => {
-      setBackgroundImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -22,21 +26,15 @@ const TopPage = ({ isMouseOver }) => {
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute ${
         isMouseOver ? "left-onHover" : ""
       } `}
-      style={{ width: 1200}}
+      style={{ width: 1200 }}
     >
-      <div
-        className="  flex flex-col justify-between bg-cover bg-center h-screen "
-        style={{
-          backgroundImage: `url(${images[backgroundImageIndex]})`,
-          transition: "background-image 4s ",
-        }}
-      >
+      <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
 
-        <div className="line font-body font-thin text-white  text-6xl w-3/5 pl-8">
+        <div className="line font-body font-thin text-white  text-6xl w-4/6 pl-8">
           <h2 className="lineUp">
-            REVITALIZE OFFICES AND REAL ESTATE WITH SMART INVESTMENTS. CRAFT
-            LUXURY SPACES FOR INVESTORS.
+            BUILDING TOMORROW, INVESTING IN YOUR FUTURE: REDEFINING REAL ESTATE
+            WITH AMBIANCE AND INNOVATION.
           </h2>
         </div>
         <div className="flex flex-row items-center text-white text-xl gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
@@ -49,12 +47,13 @@ const TopPage = ({ isMouseOver }) => {
 
       <div className=" 11/12 flex flex-col p-16">
         <div className="text-4xl text-medium w-3/5 tracking-wider leading-relaxed">
-          We're a top <a className="text-orange-400">fund manager</a> in{" "}
-          <a className="text-orange-400">Indore </a>, specializing in{" "}
-          <a className="text-orange-400">elevating interior </a> design for
-          commercial spaces. Our focus on Indore and key CBD areas ensures
-          innovative solutions for a <a className="text-orange-400">modern</a>{" "}
-          and <a className="text-orange-400">sophisticated environment </a>.
+          Discover transformative real estate investments in{" "}
+          <a className="text-orange-400">Indore</a> with{" "}
+          <a className="text-orange-400">Ambient</a> Group. Redefine your future
+          through <a className="text-orange-400">innovative</a> and ambient
+          spaces. Invest confidently in{" "}
+          <a className="text-orange-400">residential</a> and{" "}
+          <a className="text-orange-400">commercial</a> opportunities with us.
         </div>
         <button
           className=" w-36 h-3 bg-black text-white mt-8 font-medium"
@@ -64,7 +63,7 @@ const TopPage = ({ isMouseOver }) => {
         </button>
       </div>
 
-      <div className="flex flex-col w-11/12">
+      <div className={`flex flex-col w-11/12 mt-16 } `}>
         {/* First Row  */}
         <div className=" flex flex-row justify-between">
           <div className=" flex flex-row justify-around">
@@ -83,9 +82,7 @@ const TopPage = ({ isMouseOver }) => {
 
               <div className=" flex flex-col">
                 <p>PINECREST PLAZA</p>
-                <p className=" text-gray-500">
-                  78 Serenity Lane, Peakview CO 80123
-                </p>
+                <p className=" text-gray-500">RNT Marg</p>
               </div>
             </div>
           </div>
@@ -104,10 +101,8 @@ const TopPage = ({ isMouseOver }) => {
                 <img src="/public/images/Commercials/Three.jpg" />
               </div>
               <div className=" flex flex-col">
-                <p>EMERALD RETREAT CONDOS</p>
-                <p className=" text-gray-500">
-                  77 Sapphire Street, Gemsville GA 30301
-                </p>
+                <p>SERENITY MANOR</p>
+                <p className=" text-gray-500">Race Course Road</p>
               </div>
             </div>
           </div>
@@ -128,10 +123,8 @@ const TopPage = ({ isMouseOver }) => {
                 <img src="/public/images/Commercials/Six.jpg" />
               </div>
               <div className=" flex flex-col">
-                <p>EMERALD RETREAT CONDOS</p>
-                <p className=" text-gray-500">
-                  77 Sapphire Street, Gemsville GA 30301
-                </p>
+                <p>CELESTIAL RETREAT</p>
+                <p className=" text-gray-500">Annapurna Main Road</p>
               </div>
             </div>
           </div>
@@ -151,10 +144,8 @@ const TopPage = ({ isMouseOver }) => {
               </div>
 
               <div className=" flex flex-col">
-                <p>PINECREST PLAZA</p>
-                <p className=" text-gray-500">
-                  78 Serenity Lane, Peakview CO 80123
-                </p>
+                <p>ENCHANTED</p>
+                <p className=" text-gray-500">Race Course Road</p>
               </div>
             </div>
           </div>
@@ -176,10 +167,8 @@ const TopPage = ({ isMouseOver }) => {
               </div>
 
               <div className=" flex flex-col">
-                <p>PINECREST PLAZA</p>
-                <p className=" text-gray-500">
-                  78 Serenity Lane, Peakview CO 80123
-                </p>
+                <p>ETHEREAL HAVEN</p>
+                <p className=" text-gray-500">Annapurna Main Road</p>
               </div>
             </div>
           </div>
@@ -198,10 +187,8 @@ const TopPage = ({ isMouseOver }) => {
                 <img src="/public/images/Commercials/Eight.jpg" />
               </div>
               <div className=" flex flex-col">
-                <p>EMERALD RETREAT CONDOS</p>
-                <p className=" text-gray-500">
-                  77 Sapphire Street, Gemsville GA 30301
-                </p>
+                <p>GRANDEUR GROVE</p>
+                <p className=" text-gray-500">Race Course Road</p>
               </div>
             </div>
           </div>
@@ -215,16 +202,16 @@ const TopPage = ({ isMouseOver }) => {
             " April provides us the opportunity to invest into smart and unique,
             value add property deals."
           </p>
-          <a className="text-orange-400">BEN RITCHIE, MPA </a>
+          <a className="text-orange-400">SHREEYANSH, VP</a>
         </div>
         <div className="w-1/4 h-72 border-l border-black text-xl pl-5 font-serif flex flex-col justify-between">
           <p>
-            " Having worked with David since 1998 and April since its inception
+            " Having worked with Nayan since 1998 and April since its inception
             in 2009 we are proud of our relationship, the assets they have
             created and the resulting benefits to my investment portfolio have
             been life changing. "
           </p>
-          <a className="text-orange-400">BEN RITCHIE, MPA </a>
+          <a className="text-orange-400">SHIVAM, MLA</a>
         </div>
       </div>
 
@@ -256,14 +243,14 @@ const TopPage = ({ isMouseOver }) => {
               Level 6, 50 Holt Street,<br></br> Surry Hills, NSW, 2010
             </p>
           </div>
-          <a className="text-orange-400">BEN RITCHIE, MPA </a>
+          <a className="text-orange-400">VIVEK, MD </a>
         </div>
         <div className="w-1/4 h-56 border-l border-white text-sm text-white pl-5 font-medium flex flex-col justify-between">
           <div>
             <p className=" pb-3">ENQUIRIES</p>
             <p className="font-serif">General enquiries</p>
           </div>
-          <a className="text-orange-400">BEN RITCHIE, MPA </a>
+          <a className="text-orange-400">VINEET, SALES MANAGER </a>
         </div>
       </div>
     </div>

@@ -2,6 +2,25 @@
   transition: transform 0.5s ease-in-out;
 }
 
+.MainBackground {
+  animation: change 30s infinite ease-in-out;
+}
+
+@keyframes change {
+  0% {
+    background-image: url(/public/images/HomePage/Three.jpg);
+  }
+  30% {
+    background-image: url(/public/images/HomePage/One.jpg);
+  }
+  80% {
+    background-image: url(/public/images/HomePage/Two.jpg);
+  }
+  100% {
+    background-image: url(/public/images/HomePage/Three.jpg);
+  }
+}
+
 .img-container {
   width: 400px;
   height: 400px;
@@ -17,6 +36,10 @@
 .img-container:hover > img {
   transform: scale(1.25);
   filter: brightness(60%);
+}
+
+.animate-up {
+  transform: translateY(-50px);
 }
 
 .line {
