@@ -3,7 +3,7 @@ import { GoArrowDown } from "react-icons/go";
 import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
 
-const TopPage = () => {
+const TopPage = ({ isMouseOver }) => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
   const images = [
     "/public/images/HomePage/Two.jpg",
@@ -18,7 +18,12 @@ const TopPage = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col justify-center items-center w-11/12 bg-white z-1 absolute">
+    <div
+      className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute ${
+        isMouseOver ? "left-onHover" : ""
+      } `}
+      style={{ width: 1200}}
+    >
       <div
         className="  flex flex-col justify-between bg-cover bg-center h-screen "
         style={{

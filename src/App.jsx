@@ -8,24 +8,25 @@ export default function App() {
 
   const handleMouseEnter = () => {
     setIsMouseOver(true);
+    console.log(" Mouse is over the Properties");
   };
 
   const handleMouseLeave = () => {
     setIsMouseOver(false);
+    console.log(" Mouse is left the Properties");
   };
 
   return (
     <div className="background-container z-0">
-      <Properties
+      <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-      />
+      >
+        <Properties isMouseOver={isMouseOver} />
+      </div>
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={<Home isMouseOver={isMouseOver} />}
-          />
+          <Route path="/" element={<Home isMouseOver={isMouseOver} />} />
         </Routes>
       </BrowserRouter>
     </div>
