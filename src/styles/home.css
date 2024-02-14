@@ -9,11 +9,11 @@
 
 .left-HideOn {
   transform: translateX(-79%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 1s ease-in-out;
 }
 
 .MainBackground {
-  animation: change 30s infinite ease-in;
+  animation: change 30s infinite ease-in-out;
 }
 
 @keyframes change {
@@ -59,6 +59,7 @@
 .lineUp {
   animation: 6s anim-lineUp ease-out;
 }
+
 @keyframes anim-lineUp {
   0% {
     opacity: 0;

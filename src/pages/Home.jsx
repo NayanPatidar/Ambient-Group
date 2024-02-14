@@ -41,7 +41,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       <div data-aos="fade-up" className=" 11/12 flex flex-col p-16">
         <div className="text-4xl text-medium w-3/5 tracking-wider leading-relaxed">
           Discover transformative real estate investments in{" "}
-          <a className="text-orange-400">Indore</a> with{" "}
+          <a className="text-orange-400">Mumbai</a> with{" "}
           <a className="text-orange-400">Ambient</a> Group. Redefine your future
           through <a className="text-orange-400">innovative</a> and ambient
           spaces. Invest confidently in{" "}

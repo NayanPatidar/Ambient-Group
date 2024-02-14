@@ -28,6 +28,14 @@ export default function App() {
     setIsMouseClicked(false);
   };
 
+  useEffect(() => {
+    if (isMouseClicked) {
+      document.body.classList.add("hide-scroll-bar");
+    } else {
+      document.body.classList.remove("hide-scroll-bar");
+    }
+  }, [isMouseClicked]);
+
   return (
     <div className="background-container z-0">
       <div

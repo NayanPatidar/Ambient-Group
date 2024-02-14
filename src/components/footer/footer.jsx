@@ -8,7 +8,7 @@ export default function Footer() {
           <span className=" font-bold text-lg">AMBIENT</span> INTERIORS
         </span>
         <div className=" text-xs">
-          INDORE'S PREMIER INTERIOR DESIGN LICENSED AND ACCREDITED - LICENCE NO:
+          MUMBAI'S PREMIER INTERIOR DESIGN LICENSED AND ACCREDITED - LICENCE NO:
           505959 <br></br>WEBSITE CRAFTED BY AMBIENT INTERIOR
         </div>
       </div>
