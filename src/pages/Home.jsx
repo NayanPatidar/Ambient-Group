@@ -6,13 +6,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../components/footer/Footer";
 
-const TopPage = ({ isMouseOver, isMouseClicked }) => {
+const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
+  const handleClick = () => {
+    handleHomeClick(false);
+  };
+
+  console.log(`Data in Home : ${MouseClicked}`);
 
   return (
     <div
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute
          ${isMouseOver ? "left-onHover" : ""}
-        ${isMouseClicked ? "left-HideOn" : "left-HideOff"}`}
+        ${MouseClicked ? "left-HideOn" : "left-HideOff"}
+        `}
+      onClick={handleClick}
     >
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />

@@ -20,7 +20,6 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
   ];
 
   const itemsTypes = ["ALL PROPERTIES", "COMMERCIAL", "RESIDENTIAL"];
-  console.log(isMouseOver);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
@@ -32,7 +31,7 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
 
   return (
     <div
-      className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll z-50"
+      className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll "
       style={{
         backgroundColor: isMouseClicked ? "#EB8B2E" : "black",
         transition: "background-color 0.3s ease",

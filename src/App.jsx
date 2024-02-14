@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Properties from "./pages/Properties.jsx";
-import "./App.css"
+import "./App.css";
 
 export default function App() {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -15,12 +15,17 @@ export default function App() {
 
   const handleMouseLeave = () => {
     setIsMouseOver(false);
-    console.log(" Mouse is left the Properties");
+    console.log(" Mouse has left the Properties");
   };
 
   const handleMouseClick = () => {
     setIsMouseClicked(true);
     console.log("Mouse Clicked on the properties");
+  };
+
+  const handleHomeMouseClick = (dataFromChild) => {
+    setIsMouseClicked(`${dataFromChild} : We Got This from the Child `);
+    setIsMouseClicked(false);
   };
 
   return (
@@ -37,7 +42,11 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Home isMouseOver={isMouseOver} isMouseClicked={isMouseClicked} />
+              <Home
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
             }
           />
         </Routes>
