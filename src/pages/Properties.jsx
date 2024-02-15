@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
+import ImageGallery from "../components/gallery/imageGallery";
+import data from "../backend/db/detailsProp.jsx";
 import "../styles/listProperties.css";
 
 export default function Properties({ isMouseOver, isMouseClicked }) {
@@ -8,25 +10,48 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
 
   const items = [
     "ALL",
-    "PADDINGTON",
-    "BALMAIN",
-    "ROSEBERY",
+    "AUCKLAND",
+    "NAIROBI",
+    "AMSTERDAM",
     "SURRY",
-    "HILLS",
-    "MASCOT",
+    "SINGAPORE",
+    "BUENOS AIRES",
     "SYDNEY",
-    "WAVERLEY",
-    "BONDI",
   ];
 
   const itemsTypes = ["ALL PROPERTIES", "COMMERCIAL", "RESIDENTIAL"];
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    // console.log(`${item} : isSelected from the Item Type `);
+    filterImages();
   };
 
   const handlePropertyTypeClick = (type) => {
     setTypeProperty(type);
+    // console.log(`${type} : isSelected from the Property Type `);
+  };
+
+  const filterImages = () => {
+    const filteredData = data.filter((item) => {
+      if (selectedTypeProperty === "ALL PROPERTIES") {
+        if (selectedItem === "ALL") {
+          return data;
+        } else {
+          return item.place == selectedItem;
+        }
+      } else {
+        if (selectedItem === "ALL" && selectedTypeProperty === item.type) {
+          return data;
+        } else {
+          return (
+            item.place == selectedItem && item.type == selectedTypeProperty
+          );
+        }
+      }
+    });
+
+    return filteredData;
   };
 
   return (
@@ -112,7 +137,9 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
               </div>
             </div>
           </div>
-          <div></div>
+          <div className=" pl-11">
+            <ImageGallery data={filterImages()} />
+          </div>
         </div>
       </div>
     </div>

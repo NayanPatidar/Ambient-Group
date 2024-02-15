@@ -10,17 +10,17 @@ export default function App() {
 
   const handleMouseEnter = () => {
     setIsMouseOver(true);
-    console.log(" Mouse is over the Properties");
+    // console.log(" Mouse is over the Properties");
   };
 
   const handleMouseLeave = () => {
     setIsMouseOver(false);
-    console.log(" Mouse has left the Properties");
+    // console.log(" Mouse has left the Properties");
   };
 
   const handleMouseClick = () => {
     setIsMouseClicked(true);
-    console.log("Mouse Clicked on the properties");
+    // console.log("Mouse Clicked on the properties");
   };
 
   const handleHomeMouseClick = (dataFromChild) => {

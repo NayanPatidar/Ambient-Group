@@ -4,14 +4,14 @@ import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "../components/footer/Footer";
+import Footer from "../components/footer/footer";
 
 const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
   const handleClick = () => {
     handleHomeClick(false);
   };
 
-  console.log(`Data in Home : ${MouseClicked}`);
+  // console.log(`Data in Home : ${MouseClicked}`);
 
   return (
     <div
@@ -40,8 +40,8 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
       <div data-aos="fade-up" className=" 11/12 flex flex-col p-16">
         <div className="text-4xl text-medium w-3/5 tracking-wider leading-relaxed">
-          Discover transformative real estate investments in{" "}
-          <a className="text-orange-400">Mumbai</a> with{" "}
+          Discover transformative real estate investments all over the{" "}
+          <a className="text-orange-400">World</a> with{" "}
           <a className="text-orange-400">Ambient</a> Group. Redefine your future
           through <a className="text-orange-400">innovative</a> and ambient
           spaces. Invest confidently in{" "}
@@ -75,7 +75,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
               <div className=" flex flex-col">
                 <p>PINECREST PLAZA</p>
-                <p className=" text-gray-500">RNT Marg</p>
+                <p className=" text-gray-500">Mystic Falls</p>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
               </div>
               <div className=" flex flex-col">
                 <p>SERENITY MANOR</p>
-                <p className=" text-gray-500">Race Course Road</p>
+                <p className=" text-gray-500">Rio de Janeiro, Brazil</p>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
               </div>
               <div className=" flex flex-col">
                 <p>CELESTIAL RETREAT</p>
-                <p className=" text-gray-500">Annapurna Main Road</p>
+                <p className=" text-gray-500">Tokyo, Japan</p>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
               <div className=" flex flex-col">
                 <p>ENCHANTED</p>
-                <p className=" text-gray-500">Race Course Road</p>
+                <p className=" text-gray-500">Sydney, Australia</p>
               </div>
             </div>
           </div>
