@@ -15,7 +15,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
   return (
     <div
-      className={`MainHome flex flex-col justify-center items-center bg-white z-1 absolute
+      className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative
          ${isMouseOver ? "left-onHover" : ""}
         ${MouseClicked ? "left-HideOn" : "left-HideOff"}
         `}

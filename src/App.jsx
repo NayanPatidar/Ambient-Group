@@ -4,6 +4,14 @@ import Home from "./pages/Home.jsx";
 import Properties from "./pages/Properties.jsx";
 import "./App.css";
 import SerenityCottage from "./pages/Serenity.jsx";
+import StartlightPage from "./pages/Startlight.jsx";
+import PinesManorPage from "./pages/PinesManor.jsx";
+import HarmonyHavenPage from "./pages/HarmonyHaven.jsx";
+import TranquilRetreatPage from "./pages/TranquilRetreat.jsx";
+import EnchartedPage from "./pages/Encharted.jsx";
+import MoonlitMiragePage from "./pages/MoonlitMirage.jsx";
+import RusticBlissPage from "./pages/RusticBliss.jsx";
+import EmeraldOasisPage from "./pages/EmeraldOasis.jsx";
 
 export default function App() {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -62,6 +70,86 @@ export default function App() {
             path="/property/auckland/serenitycottage"
             element={
               <SerenityCottage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/auckland/pinesmanor"
+            element={
+              <PinesManorPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/nairobi/harmonyhaven"
+            element={
+              <HarmonyHavenPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/amsterdam/tranquilretreat"
+            element={
+              <TranquilRetreatPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/surry/enchartedhideway"
+            element={
+              <EnchartedPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/singapore/moonlitmirrage"
+            element={
+              <MoonlitMiragePage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/buenosaires/rusticbliss "
+            element={
+              <RusticBlissPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/sydney/emraldoasis"
+            element={
+              <EmeraldOasisPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/property/cammera/starlightchateau"
+            element={
+              <StartlightPage
                 isMouseOver={isMouseOver}
                 MouseClicked={isMouseClicked}
                 handleHomeClick={handleHomeMouseClick}

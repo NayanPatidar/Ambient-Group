@@ -80,7 +80,7 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             alt="Image 1"
           />
         </div>
-        <div className=" SerenityFeatures flex flex-col mt-10 ">
+        <div className=" SerenityFeatures flex flex-col mt-16 mb-16 ">
           <div className=" ml-6 text-xl text-gray-700">PROPERTY FEATURES</div>
           <div className=" flex flex-row justify-around mt-10">
             <div className=" grid grid-cols-3 gap-4 w-8/12 h-48 border border-black border-t-0 border-r-0 border-b-0 ">

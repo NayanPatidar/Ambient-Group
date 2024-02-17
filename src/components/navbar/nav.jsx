@@ -2,11 +2,18 @@ import React from "react";
 import "../../styles/nav.css";
 
 const Navbar = () => {
+  const HomePage = () => {
+    window.location.href = "/";
+  };
+
   return (
     <div className="navigation-bar">
       <div className="flex flex-row justify-between items-center mt-8 pl-8">
         <div className="text-white text-2xl font-thin pl-1">
-          <span className=" font-bold">AMBIENT</span> GROUP
+          <span className=" font-bold" onClick={HomePage}>
+            AMBIENT
+          </span>{" "}
+          GROUP
         </div>
 
         <div className=" text-white mr-10">
