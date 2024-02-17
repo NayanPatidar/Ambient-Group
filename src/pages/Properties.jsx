@@ -137,7 +137,7 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
               </div>
             </div>
           </div>
-          <div className=" pl-11">
+          <div className=" pl-11 mb-10">
             <ImageGallery data={filterImages()} />
           </div>
         </div>

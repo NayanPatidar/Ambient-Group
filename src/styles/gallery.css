@@ -1,0 +1,12 @@
+.imageDiv {
+  overflow: hidden;
+}
+
+.imageDiv > img {
+  transition: transform 250ms ease-in-out, filter 250ms ease-in-out;
+}
+
+.imageDiv:hover > img {
+  transform: scale(1.25);
+  filter: brightness(60%);
+}
