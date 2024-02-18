@@ -23,7 +23,7 @@ const detailsProperties = [
     image:
       "https://th.bing.com/th/id/R.ddd0ab31101332fc3645012e790a21fc?rik=xgA6fl5EDeh%2f4Q&riu=http%3a%2f%2fwww.remax-kenya.co.ke%2fAreaGuideImages%2f106%2f2503%2f21535%2f7840763%2f415396_orig.jpg&ehk=8LyiO2NKfwaHQYshOIgzo9%2fAMVtca9%2bP1l0YFxtEQ%2bk%3d&risl=&pid=ImgRaw&r=0",
     description: "Description for item 4 in NAIROBI",
-    redirectLink: "/property/residential/nairobi",
+    redirectLink: "/property/nairobi/harmonyhaven",
   },
   {
     name: "TRANQUIL RETREAT",

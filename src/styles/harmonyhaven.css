@@ -1,0 +1,16 @@
+.HarmonyHavenMain {
+  width: 1180px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.HarmonyHavenBackground {
+  background-image: url("../../public/images/HarmonyHaven/pexels-dan-hamill-4217001.jpg");
+  background-size: cover;
+  background-color: burlywood;
+  filter: brightness(80%);
+}
+
+.describeHarmony {
+  font-size: 32px;
+  width: 65%;
+}

@@ -25,7 +25,10 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       <div className=" SerenityBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
 
-        <div className="line font-body font-thin text-white pt-48 w-4/6 pl-8 ">
+        <div
+          data-aos="fade-up"
+          className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
+        >
           <h2 className="titleLineUp font-thin  text-6xl">SERENITY COTTAGE</h2>
           <p className=" titleLineUp font-thin  text-2xl">
             123 Main Street, Auckland, New Zealand
@@ -39,7 +42,10 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
         </div>
       </div>
 
-      <div className=" serenityDescription flex flex-col justify-center p-10">
+      <div
+        data-aos="fade-up"
+        className=" serenityDescription flex flex-col justify-center p-10"
+      >
         <h3 className=" describeCottage">
           Nestled in the heart of Auckland's bustling fashion, social, and
           culinary hub, Serenity Cottage is located on Paddington Parade. This
@@ -47,7 +53,10 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           accompanied by two levels of creative office workspaces available for
           lease.
         </h3>
-        <div className=" keyInfo flex flex-col gap-3 justify-start w-11/12">
+        <div
+          data-aos="fade-up"
+          className=" keyInfo flex flex-col gap-3 justify-start w-11/12"
+        >
           <div className=" ml-10">KEY INFO</div>
           <div className="flex flex-row gap-3 justify-start w-11/12 ml-10 mt-5">
             <div className=" w-1/6 h-48 border border-black border-t-0 border-r-0 border-b-0 pl-3">
@@ -74,15 +83,23 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        <div className=" mt-16">
+        <div data-aos="fade-up" className=" mt-16">
           <img
             src="https://www.avso.org/wp-content/uploads/files/7/5/5/abundant-living-13-755.jpg"
             alt="Image 1"
           />
         </div>
-        <div className=" SerenityFeatures flex flex-col mt-16 mb-16 ">
-          <div className=" ml-6 text-xl text-gray-700">PROPERTY FEATURES</div>
-          <div className=" flex flex-row justify-around mt-10">
+        <div
+          data-aos="fade-up"
+          className=" SerenityFeatures flex flex-col mt-16 mb-16 "
+        >
+          <div data-aos="fade-up" className=" ml-6 text-xl text-gray-700">
+            PROPERTY FEATURES
+          </div>
+          <div
+            data-aos="fade-up"
+            className=" flex flex-row justify-around mt-10"
+          >
             <div className=" grid grid-cols-3 gap-4 w-8/12 h-48 border border-black border-t-0 border-r-0 border-b-0 ">
               <div className="pl-5 text-lg text-gray-700 flex flex-row items-center">
                 <CiTimer className=" mr-2" /> 24/7 Building Manager
