@@ -100,7 +100,7 @@ export default function EnchartedPage({
         </div>
         <div
           data-aos="fade-up"
-          className=" SerenityFeatures flex flex-col mt-16 mb-16 "
+          className=" EnchartedFeatures flex flex-col mt-16 mb-16 "
         >
           <div data-aos="fade-up" className=" ml-6 text-xl text-gray-700">
             PROPERTY FEATURES
@@ -109,7 +109,7 @@ export default function EnchartedPage({
             data-aos="fade-up"
             className=" flex flex-row justify-around mt-10"
           >
-            <div className=" grid grid-cols-3 gap-4 w-8/12 h-48 border border-black border-t-0 border-r-0 border-b-0 ">
+            <div data-aos="fade-up" className=" grid grid-cols-3 gap-4 w-8/12 h-48 border border-black border-t-0 border-r-0 border-b-0 ">
               <div className="pl-5 text-lg text-gray-700 flex flex-row items-center">
                 <CiTimer className=" mr-2" /> 24/7 Building Manager
               </div>

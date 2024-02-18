@@ -98,7 +98,7 @@ export default function TranquilRetreatPage({
           </div>
         </div>
         <div className=" w- bg-slate-200">
-          <div className=" SerenityFeatures flex flex-col mt-16 mb-16 ">
+          <div data-aos="fade-up" className=" SerenityFeatures flex flex-col mt-16 mb-16 ">
             <div data-aos="fade-up" className=" ml-6 text-4xl text-gray-700 ">
               PROPERTY FEATURES
             </div>

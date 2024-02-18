@@ -86,24 +86,26 @@ export default function HarmonyHavenPage({
           </div>
         </div>
         <div data-aos="fade-up" className=" mt-16">
-          <img src="../../public/images/HarmonyHaven/House.jpg" alt="Image 1" />
+          <img
+            data-aos="fade-up"
+            src="../../public/images/HarmonyHaven/House.jpg"
+            alt="Image 1"
+          />
           <div className="flex flex-col justify-around">
             <img
-              data-aos="fade-up"
               className=" w-1/2 mt-5 mb-5"
               src="https://www.gogetyourself.com/wp-content/uploads/2021/06/Exposed-Brick-Interior-Ideas.jpg"
               alt="Image 1"
             />{" "}
             <img
-              data-aos="fade-up"
               className=" self-end w-1/2 mt-5 mb-5"
               src="https://www.aprilgroup.com.au/media/3myneag1/commercial-entry-walkway.jpg"
               alt="Image 1"
             />
           </div>
         </div>
-        <div className=" w- bg-slate-200">
-          <div className=" SerenityFeatures flex flex-col mt-16 mb-16 ">
+        <div  className=" w- bg-slate-200">
+          <div data-aos="fade-up" className="  SerenityFeatures flex flex-col mt-16 mb-16 ">
             <div data-aos="fade-up" className=" ml-6 text-4xl text-gray-700 ">
               PROPERTY FEATURES
             </div>
