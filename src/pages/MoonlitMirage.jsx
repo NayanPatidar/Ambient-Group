@@ -32,9 +32,9 @@ export default function MoonlitMiragePage({
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin  text-6xl">PINES MANOR</h2>
+          <h2 className="titleLineUp font-thin  text-6xl">MOONLIT MIRAGE</h2>
           <p className=" titleLineUp font-thin  text-2xl">
-            123 Pine Avenue, Auckland Central, New Zealand
+            123 Pine Avenue, Central Park, Singapore
           </p>
         </div>
         <div className="flex flex-row items-center text-white text-xl gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">

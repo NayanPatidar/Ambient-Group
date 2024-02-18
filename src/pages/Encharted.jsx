@@ -33,9 +33,9 @@ export default function EnchartedPage({
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin  text-6xl">SERENITY COTTAGE</h2>
+          <h2 className="titleLineUp font-thin  text-6xl">ENCHARTED HIDEWAY</h2>
           <p className=" titleLineUp font-thin  text-2xl">
-            123 Main Street, Auckland, New Zealand
+            56th Main Street, New City Lane, Surry
           </p>
         </div>
         <div className="flex flex-row items-center text-white text-xl gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
