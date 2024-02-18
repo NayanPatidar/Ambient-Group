@@ -1,10 +1,10 @@
-.EnchartedMain {
+.RusticBlissMain {
   width: 1180px;
   transition: transform 0.6s ease-in-out;
 }
 
-.EnchartedBackground {
-  background-image: url("../../public/images/Hideway/Exterior.jpg");
+.RusticBlissBackground {
+  background-image: url("https://th.bing.com/th/id/R.426674fead49f05db9a9ed24d70d4e2f?rik=yxUm9PkcOn7LyQ&riu=http%3a%2f%2frealestateadminimages.gabriels.net%2f170%2f78116%2f170-IMG_10412018090221365370-397.jpg&ehk=eDd132TAzeO2IAfOWdDuwDrSVxBUQva4YTHsTjgo9Ts%3d&risl=&pid=ImgRaw&r=0");
   background-size: cover;
   background-color: burlywood;
   filter: brightness(80%);
@@ -47,14 +47,14 @@
   font-size: larger;
 }
 
-.describeCottage {
+.describeRusticBliss {
   font-size: 32px;
   width: 65%;
   /* padding-top: 100px;
-    padding-left: 40px; */
+        padding-left: 40px; */
 }
 
-.serenityInteriors {
+.RusticBlissInteriors {
   justify-self: center;
   margin-top: 50px;
   align-self: flex-end;

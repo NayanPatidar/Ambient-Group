@@ -111,7 +111,10 @@ export default function PinesManorPage({
             <div data-aos="fade-up" className=" ml-6 text-4xl text-gray-700 ">
               PROPERTY FEATURES
             </div>
-            <div data-aos="fade-up" className=" flex flex-row justify-around mt-10">
+            <div
+              data-aos="fade-up"
+              className=" flex flex-row justify-around mt-10"
+            >
               <div className=" grid grid-cols-3 gap-4 w-8/12 h-48 border border-black border-t-0 border-r-0 border-b-0 ">
                 <div className="pl-5 text-lg text-gray-700 flex flex-row items-center">
                   <CiTimer className=" mr-2" /> 24/7 Building Manager

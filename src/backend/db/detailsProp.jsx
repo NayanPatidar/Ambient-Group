@@ -69,16 +69,7 @@ const detailsProperties = [
       "https://cdn.newsapi.com.au/image/v1/3f8c14285f8715123785e18658c5ca31?width=650",
     description: "Description for item 9 in SYDNEY",
     redirectLink: "/property/sydney/emeraldoasis",
-  },
-  {
-    name: "STARLIGHT CHATEAU",
-    type: "RESIDENTIAL",
-    place: "CAMMERA",
-    image:
-      "https://citynews.com.au/wp-content/uploads/2014/09/05_DSC_74091.jpg",
-    description: "Description for item 10 in CAMMERA",
-    redirectLink: "/property/cammera/starlightchateau",
-  },
+  }
 ];
 
 export default detailsProperties;

@@ -4,7 +4,6 @@ import Home from "./pages/Home.jsx";
 import Properties from "./pages/Properties.jsx";
 import "./App.css";
 import SerenityCottage from "./pages/Serenity.jsx";
-import StartlightPage from "./pages/Startlight.jsx";
 import PinesManorPage from "./pages/PinesManor.jsx";
 import HarmonyHavenPage from "./pages/HarmonyHaven.jsx";
 import TranquilRetreatPage from "./pages/TranquilRetreat.jsx";
@@ -117,7 +116,7 @@ export default function App() {
             }
           />
           <Route
-            path="/property/singapore/moonlitmirrage"
+            path="/property/singapore/moonlitmirage"
             element={
               <MoonlitMiragePage
                 isMouseOver={isMouseOver}
@@ -127,7 +126,7 @@ export default function App() {
             }
           />
           <Route
-            path="/property/buenosaires/rusticbliss "
+            path="/property/buenosaires/rusticbliss"
             element={
               <RusticBlissPage
                 isMouseOver={isMouseOver}
@@ -137,19 +136,9 @@ export default function App() {
             }
           />
           <Route
-            path="/property/sydney/emraldoasis"
+            path="/property/sydney/emeraldoasis"
             element={
               <EmeraldOasisPage
-                isMouseOver={isMouseOver}
-                MouseClicked={isMouseClicked}
-                handleHomeClick={handleHomeMouseClick}
-              />
-            }
-          />
-          <Route
-            path="/property/cammera/starlightchateau"
-            element={
-              <StartlightPage
                 isMouseOver={isMouseOver}
                 MouseClicked={isMouseClicked}
                 handleHomeClick={handleHomeMouseClick}

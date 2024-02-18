@@ -88,10 +88,15 @@ export default function EnchartedPage({
           </div>
         </div>
         <div data-aos="fade-up" className=" mt-16">
-          <img
-            src="https://www.avso.org/wp-content/uploads/files/7/5/5/abundant-living-13-755.jpg"
-            alt="Image 1"
-          />
+          <img src="../../public/images/Hideway/Interior.jpg" alt="Image 1" />
+          <div className="flex flex-col justify-around">
+            <img
+              data-aos="fade-up"
+              className=" self-end w-1/2 mt-5 mb-5"
+              src="../../public/images/Hideway/Interior2.jpg"
+              alt="Image 1"
+            />
+          </div>
         </div>
         <div
           data-aos="fade-up"

@@ -1,10 +1,10 @@
-.EnchartedMain {
+.EmraldManorMain {
   width: 1180px;
   transition: transform 0.6s ease-in-out;
 }
 
-.EnchartedBackground {
-  background-image: url("../../public/images/Hideway/Exterior.jpg");
+.EmraldBackground {
+  background-image: url("../../public/images/Sydney/Background.jpg");
   background-size: cover;
   background-color: burlywood;
   filter: brightness(80%);
@@ -47,11 +47,11 @@
   font-size: larger;
 }
 
-.describeCottage {
+.describeEmrald {
   font-size: 32px;
   width: 65%;
   /* padding-top: 100px;
-    padding-left: 40px; */
+      padding-left: 40px; */
 }
 
 .serenityInteriors {
