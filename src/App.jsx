@@ -11,6 +11,7 @@ import EnchartedPage from "./pages/Encharted.jsx";
 import MoonlitMiragePage from "./pages/MoonlitMirage.jsx";
 import RusticBlissPage from "./pages/RusticBliss.jsx";
 import EmeraldOasisPage from "./pages/EmeraldOasis.jsx";
+import Investors from "./pages/Investors.jsx";
 
 export default function App() {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -139,6 +140,16 @@ export default function App() {
             path="/property/sydney/emeraldoasis"
             element={
               <EmeraldOasisPage
+                isMouseOver={isMouseOver}
+                MouseClicked={isMouseClicked}
+                handleHomeClick={handleHomeMouseClick}
+              />
+            }
+          />
+          <Route
+            path="/investors"
+            element={
+              <Investors
                 isMouseOver={isMouseOver}
                 MouseClicked={isMouseClicked}
                 handleHomeClick={handleHomeMouseClick}
