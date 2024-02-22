@@ -1,0 +1,15 @@
+.AboutMain {
+    width: 90%;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .AboutBackground {
+    background-image: url("../../public/images/About/aboutbackground.jpg");
+    background-size: cover;
+    background-color: burlywood;
+  }
+  
+  .line {
+      height: 80%;
+  }
+  

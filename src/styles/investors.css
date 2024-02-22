@@ -1,3 +1,14 @@
+.InvestorsMain {
+  width: 90%;
+  transition: transform 0.6s ease-in-out;
+}
+
 .InvestorsBackground {
-    width: 1100px;
+  background-image: url("../../public/images/Investors/background.jpg");
+  background-size: cover;
+  background-color: burlywood;
+}
+
+.line {
+    height: 80%;
 }
