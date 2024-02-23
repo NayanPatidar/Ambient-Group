@@ -15,7 +15,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
   return (
     <div
-      className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative
+      className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0
          ${isMouseOver ? "left-onHover" : ""}
         ${MouseClicked ? "left-HideOn" : "left-HideOff"}
         `}
@@ -24,22 +24,22 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
 
-        <div className="line font-body font-thin text-white  text-6xl w-4/6 pl-8 ">
-          <h2 className="lineUp">
+        <div className="line font-thin text-white lg:w-4/6 md:w-4/6 w-5/6 pl-8 text-3xl sm:text-3xl md:text-5xl lg:text-6xl  ">
+          <h2 className="lineUp sm:pt-10 md:pt-5 pt-16">
             BUILDING TOMORROW, INVESTING IN YOUR FUTURE: REDEFINING REAL ESTATE
             WITH AMBIANCE AND INNOVATION.
           </h2>
         </div>
-        <div className="flex flex-row items-center text-white text-xl gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
-          <GoArrowDown />
-          <p className=" text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 ">
-            SCROLL TO SEE MORE
-          </p>
-        </div>
+          <div className=" flex flex-row items-center text-white gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
+            <GoArrowDown />
+            <p className=" text-sm lg:text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 ">
+              SCROLL TO SEE MORE
+            </p>
+          </div>
       </div>
 
-      <div data-aos="fade-up" className=" 11/12 flex flex-col p-16">
-        <div className="text-4xl text-medium w-3/5 tracking-wider leading-relaxed">
+      <div data-aos="fade-up" className=" flex flex-col p-16">
+        <div className=" md:w-4/5 lg:w-3/5  text-xl md:text-3xl lg:text-4xl lg:tracking-wider lg:leading-relaxed ">
           Discover transformative real estate investments all over the{" "}
           <a className="text-orange-400">World</a> with{" "}
           <a className="text-orange-400">Ambient</a> Group. Redefine your future
@@ -49,15 +49,13 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           <a className="text-orange-400">commercial</a> opportunities with us.
         </div>
         <button
-          className=" w-36 h-3 bg-black text-white mt-8 font-medium"
-          style={{ width: 250, height: 50 }}
+          className=" w-5/6 lg:w-60 md:w-60 h-10 bg-black text-white mt-8 font-medium"
         >
           ABOUT AMBIENT GROUP
         </button>
       </div>
 
       <div className="flex flex-col w-11/12">
-        {/* First Row  */}
         <div className=" flex flex-row justify-between">
           <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
@@ -100,7 +98,6 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        {/* Second Row  */}
         <div className=" flex flex-row justify-between mt-28">
           <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
@@ -143,7 +140,6 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        {/* Third Row  */}
         <div className=" flex flex-row justify-between mt-28">
           <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
@@ -185,7 +181,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
               </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
 
       <div

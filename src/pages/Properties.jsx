@@ -56,18 +56,14 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
 
   return (
     <div
-      className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll "
+      className="MainProperty w-screen   h-screen fixed overflow-auto overflow-y-scroll "
       style={{
         backgroundColor: isMouseClicked ? "#EB8B2E" : "black",
         transition: "background-color 0.3s ease",
       }}
     >
-      <div className=" flex flex-row ">
-        <div
-          className=" w-1/5 h-screen"
-          style={{ backgroundColor: "#EB8B2E" }}
-        ></div>
-        <div className="MainPropertyData flex flex-col w-4/5">
+      <div className=" flex flex-row justify-end">
+        <div className="MainPropertyData flex flex-col justify-between">
           <div className=" flex flex-row justify-between text-black text-xl font-medium h-40 pl-10 pt-8">
             <div className=" w-11/12 ">OUR PROPERTIES</div>
             <div className=" mt-1">
