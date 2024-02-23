@@ -41,7 +41,7 @@ export default function Investors({
           </h2>
           <p data-aos="fade-up" className=" text-2xl w-4/6 mt-3 text-gray-800">
             We cultivate and cultivate thriving commercial property investments
-            globally, tailored for the April Group's success in diverse markets.
+            globally, tailored for the Ambient Group's success in diverse markets.
           </p>
         </div>
         <div className=" w-2/5">
