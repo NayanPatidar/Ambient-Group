@@ -24,21 +24,21 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
 
-        <div className="line font-thin text-white lg:w-4/6 md:w-4/6 w-5/6 pl-8 text-3xl sm:text-3xl md:text-5xl lg:text-6xl  ">
+        <div className="line font-thin text-white lg:w-4/6 md:w-4/6 w-5/6 pl-8 text-2xl sm:text-3xl md:text-5xl lg:text-6xl  ">
           <h2 className="lineUp sm:pt-10 md:pt-5 pt-16">
             BUILDING TOMORROW, INVESTING IN YOUR FUTURE: REDEFINING REAL ESTATE
             WITH AMBIANCE AND INNOVATION.
           </h2>
         </div>
-          <div className=" flex flex-row items-center text-white gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
-            <GoArrowDown />
-            <p className=" text-sm lg:text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 ">
-              SCROLL TO SEE MORE
-            </p>
-          </div>
+        <div className=" flex flex-row items-center text-white gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
+          <GoArrowDown />
+          <p className=" text-sm lg:text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 ">
+            SCROLL TO SEE MORE
+          </p>
+        </div>
       </div>
 
-      <div data-aos="fade-up" className=" flex flex-col p-16">
+      <div data-aos="fade-up" className=" flex flex-col md:p-16 lg:pd-16 p-8">
         <div className=" md:w-4/5 lg:w-3/5  text-xl md:text-3xl lg:text-4xl lg:tracking-wider lg:leading-relaxed ">
           Discover transformative real estate investments all over the{" "}
           <a className="text-orange-400">World</a> with{" "}
@@ -48,26 +48,24 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           <a className="text-orange-400">residential</a> and{" "}
           <a className="text-orange-400">commercial</a> opportunities with us.
         </div>
-        <button
-          className=" w-5/6 lg:w-60 md:w-60 h-10 bg-black text-white mt-8 font-medium"
-        >
+        <button className=" w-5/6 lg:w-60 md:w-60 h-10 bg-black text-white mt-8 font-medium">
           ABOUT AMBIENT GROUP
         </button>
       </div>
 
       <div className="flex flex-col w-11/12">
-        <div className=" flex flex-row justify-between">
-          <div data-aos="fade-up" className=" flex flex-row justify-around">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between">
+          <div
+            data-aos="fade-up"
+            className=" flex flex-row justify-around  w-6/12 "
+          >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
             <div>
-              <div
-                className="img-container bg-orange-600 "
-                style={{ width: 514, height: 342 }}
-              >
+              <div className="img-container bg-orange-600 ">
                 <img src="/public/images/Commercials/One.jpg" />
               </div>
 
@@ -140,7 +138,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-row justify-between mt-28">
+        {/* <div className=" flex flex-row justify-between mt-28">
           <div data-aos="fade-up" className=" flex flex-row justify-around">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
@@ -181,10 +179,10 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div
+      {/* <div
         data-aos="fade-up"
         className=" flex flex-row justify-around h-96 w-full mt-56 border-t border-black pt-16"
       >
@@ -217,7 +215,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           <img src="/public/images/HomePage/investor.jpg" />
         </div>
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
