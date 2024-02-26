@@ -187,14 +187,14 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
         className=" flex flex-row justify-around h-96 w-full mt-56 border-t border-black pt-16"
       >
         <div className="w-1/4 h-80 text-center ">WHAT THEY SAY</div>
-        <div className="w-1/4 h-72 border-l border-black text-xl pl-5 font-serif flex flex-col justify-between">
+        <div className=" lg:w-1/4 md:w-1/4 h-72 border-l border-black lg:text-xl md:text-xl text-sm pl-5 font-serif flex flex-col justify-between">
           <p>
             " April provides us the opportunity to invest into smart and unique,
             value add property deals."
           </p>
           <a className="text-orange-400">SHREEYANSH, VP</a>
         </div>
-        <div className="w-1/4 h-72 border-l border-black text-xl pl-5 font-serif flex flex-col justify-between">
+        <div className=" lg:w-1/4 md:w-1/4  h-72 border-l border-black lg:text-xl md:text-xl text-xs pl-5 font-serif flex flex-col justify-between">
           <p>
             " Having worked with Nayan since 1998 and April since its inception
             in 2009 we are proud of our relationship, the assets they have
@@ -206,7 +206,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       </div>
 
       <div className=" bg-black h-96 w-full mt-24 flex flex-row p-9 justify-between">
-        <div className=" w-4/6 text-white text-3xl items-center pt-8 pr-6 leading-normal">
+        <div className=" w-4/6 text-white lg:text-3xl md:text-2xl sm:text-2xl text-xs items-center pt-8 pr-6 leading-normal">
           We pride ourselves on owning and managing quality, legacy style assets
           designed to create long lasting communities and improve the wellbeing
           of the people who occupy them
