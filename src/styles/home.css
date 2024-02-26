@@ -40,7 +40,7 @@
 }
 
 .img-container {
-
+  
   overflow: hidden;
 }
 
@@ -55,15 +55,15 @@
   filter: brightness(60%);
 }
 
-.line {
-  width: 100%;
+.HomeDataDiv {
+  width: 100px;
   height: 20rem;
   overflow: hidden;
   padding: 0;
   margin-bottom: 16px;
 }
 
-.lineUp {
+.HomeDesc {
   animation: 6s anim-lineUp ease-out;
 }
 

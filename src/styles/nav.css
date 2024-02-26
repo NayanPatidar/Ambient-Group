@@ -1,16 +1,30 @@
 .navTags {
-  display: inline-block;
   position: relative;
 }
+
 .navTags:after {
   content: "";
   width: 0px;
   height: 2px;
   position: absolute;
   top: 100%;
-  left: 0;
   background: rgb(255, 255, 255);
   transition: 300ms;
+}
+
+.Title {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+}
+
+@media (max-width: 435px) {
+  .Title {
+    font-size: medium;
+  }
+}
+
+.NavSites {
+  margin-right: 20px;
 }
 
 .navTags:hover:after {
@@ -19,6 +33,4 @@
 
 .navTags:not(:hover):after {
   right: 0;
-  left: auto;
 }
-

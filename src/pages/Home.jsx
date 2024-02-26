@@ -24,8 +24,8 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
 
-        <div className="line font-thin text-white lg:w-4/6 md:w-4/6 w-5/6 pl-8 text-2xl sm:text-3xl md:text-5xl lg:text-6xl  ">
-          <h2 className="lineUp sm:pt-10 md:pt-5 pt-16">
+        <div className="HomeDataDiv font-thin text-white  w-5/6 pl-8  ">
+          <h2 className="HomeDesc sm:pt-10 md:pt-5 pt-5 text-2xl xs:text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
             BUILDING TOMORROW, INVESTING IN YOUR FUTURE: REDEFINING REAL ESTATE
             WITH AMBIANCE AND INNOVATION.
           </h2>
@@ -48,7 +48,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           <a className="text-orange-400">residential</a> and{" "}
           <a className="text-orange-400">commercial</a> opportunities with us.
         </div>
-        <button className=" w-5/6 lg:w-60 md:w-60 h-10 bg-black text-white mt-8 font-medium">
+        <button className=" w-11/12 text-sm lg:w-60 md:w-60 h-10 bg-black text-white mt-8 font-medium">
           ABOUT AMBIENT GROUP
         </button>
       </div>
@@ -57,7 +57,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
         <div className=" flex lg:flex-row md:flex-row flex-col justify-between">
           <div
             data-aos="fade-up"
-            className=" flex flex-row justify-around  w-6/12 "
+            className="flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
@@ -65,8 +65,8 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
               </p>
             </div>
             <div>
-              <div className="img-container bg-orange-600 ">
-                <img src="/public/images/Commercials/One.jpg" />
+              <div className="img-container bg-orange-600">
+                <img src="/public/images/Commercials/One.jpg" className="" />
               </div>
 
               <div className=" flex flex-col">
@@ -76,17 +76,17 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
 
-          <div data-aos="fade-up" className=" flex flex-row justify-around">
+          <div
+            data-aos="fade-up"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full ml-5 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0"
+          >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
             <div className="mr-12">
-              <div
-                className="img-container bg-orange-600"
-                style={{ width: 323, height: 485 }}
-              >
+              <div className="img-container bg-orange-600 ">
                 <img src="/public/images/Commercials/Three.jpg" />
               </div>
               <div className=" flex flex-col">
@@ -96,18 +96,18 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-row justify-between mt-28">
-          <div data-aos="fade-up" className=" flex flex-row justify-around">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between">
+          <div
+            data-aos="fade-up"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full ml-0 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
+          >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
             <div>
-              <div
-                className="img-container bg-orange-600"
-                style={{ width: 323, height: 485 }}
-              >
+              <div className="img-container bg-orange-600">
                 <img src="/public/images/Commercials/Six.jpg" />
               </div>
               <div className=" flex flex-col">
@@ -117,17 +117,17 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
 
-          <div data-aos="fade-up" className=" flex flex-row justify-around">
+          <div
+            // data-aos="fade-up"
+            className=" flex flex-row justify-around  lg:w-6/12 md:w-6/12 sm:w-6/12 w-full xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
+          >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
             <div>
-              <div
-                className="img-container bg-orange-600 "
-                style={{ width: 514, height: 342 }}
-              >
+              <div className="img-container bg-orange-600 ">
                 <img src="/public/images/Commercials/Four.jpg" />
               </div>
 
@@ -138,18 +138,18 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        {/* <div className=" flex flex-row justify-between mt-28">
-          <div data-aos="fade-up" className=" flex flex-row justify-around">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-5">
+          <div
+            data-aos="fade-up"
+            className="flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full"
+          >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
             <div>
-              <div
-                className="img-container bg-orange-600 "
-                style={{ width: 514, height: 310 }}
-              >
+              <div className="img-container bg-orange-600 ">
                 <img src="/public/images/Commercials/Five.jpg" />
               </div>
 
@@ -160,17 +160,17 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
 
-          <div data-aos="fade-up" className=" flex flex-row justify-around">
+          <div
+            data-aos="fade-up"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full ml-5 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
+          >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
             <div className="mr-12">
-              <div
-                className="img-container bg-orange-600"
-                style={{ width: 323, height: 480 }}
-              >
+              <div className="img-container bg-orange-600">
                 <img src="/public/images/Commercials/Eight.jpg" />
               </div>
               <div className=" flex flex-col">
@@ -179,10 +179,10 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
 
-      {/* <div
+      <div
         data-aos="fade-up"
         className=" flex flex-row justify-around h-96 w-full mt-56 border-t border-black pt-16"
       >
@@ -215,7 +215,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           <img src="/public/images/HomePage/investor.jpg" />
         </div>
       </div>
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

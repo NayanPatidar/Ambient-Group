@@ -11,6 +11,9 @@ export default {
         medium: 400,
         semidark: 500,
       },
+      screens: {
+        'xs' : '350px',
+      }
     },
     
   },
