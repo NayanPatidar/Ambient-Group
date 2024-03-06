@@ -13,41 +13,42 @@ export default function Investors({
   };
   return (
     <div
-      className={`InvestorsMain flex flex-col justify-center items-center bg-white z-1 absolute          
+      className={`InvestorsMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
         ${isMouseOver ? "left-onHover" : ""}
         ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
       onClick={handleClick}
     >
-      <div className="InvestorsBackground h-screen w-full">
+      <div className="InvestorsBackground flex flex-col bg-cover bg-center h-screen">
         <Navbar />
         <div
           data-aos="fade-up"
-          className="font-body font-thin text-white pt-48 w-4/6 pl-8"
+          className="font-body font-thin text-white pt-40 w-4/6 pl-8"
         >
-          <h2 className="titleLineUp font-thin text-5xl">
+          <h2 className="titleLineUp sm:pt-10 md:pt-5 pt-5 text-2xl xs:text-3xl sm:text-3xl md:text-5xl lg:text-5xl">
             ELEVATE YOUR PORTFOLIO WITH OUR PREMIUM PROPERTIES – NOT JUST A
             HOME, BUT A PROMISE OF SUBSTANTIAL RETURNS AND PROSPERITY.
           </h2>
         </div>
       </div>
 
-      <div className=" bg-white p-10 flex flex-row w-full">
-        <div className=" mt-20 w-2/3">
+      <div className=" bg-white p-10 flex lg:flex-row md:flex-row flex-col w-full">
+        <div className=" lg:pt-20 lg:w-2/3 md:w-2/3 w-full">
           <h2
-            data-aos="fade-up"
-            className=" font-thin text-3xl font-sans text-gray-800"
+            // data-aos="fade-up"
+            className=" font-thin text-2xl font-sans text-gray-800"
           >
             INVESTING WITH AMBIENT GROUP
           </h2>
-          <p data-aos="fade-up" className=" text-2xl w-4/6 mt-3 text-gray-800">
+          <p data-aos="fade-up" className="md:w-4/5 lg:w-3/5  text-xl md:text-xl lg:text-2xl lg:tracking-wider lg:leading-relaxed ">
             We cultivate and cultivate thriving commercial property investments
-            globally, tailored for the Ambient Group's success in diverse markets.
+            globally, tailored for the Ambient Group's success in diverse
+            markets.
           </p>
         </div>
-        <div className=" w-2/5">
+        <div className="mt-10 w-2/5 lg: md: self-center">
           <img
-            data-aos="fade-up"
-            className=" w-5/6"
+            // data-aos="fade-up"
+            className=" min-w-28"
             src="../../public/images/Investors/Invest.jpg"
           />
         </div>
@@ -125,7 +126,7 @@ export default function Investors({
         </div>
       </div>
 
-      <div className=" w-full bg-orange-500 p-10 flex flex-col">
+      {/* <div className=" w-full bg-orange-500 p-10 flex flex-col"> 
         <div data-aos="fade-up" className=" text-4xl mt-8">
           FEATURED ADVANTAGES
         </div>
@@ -170,7 +171,7 @@ export default function Investors({
             </p>
           </div>
         </div>
-      </div>
+    </div>*/}
       <Footer />
     </div>
   );

@@ -11,8 +11,6 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
     handleHomeClick(false);
   };
 
-  // console.log(`Data in Home : ${MouseClicked}`);
-
   return (
     <div
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0
