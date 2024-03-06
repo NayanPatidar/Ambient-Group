@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="navigation-bar">
       <div className="flex flex-row justify-between items-center mt-8 ">
-        <div className="Title text-white font-thin pl-8 cursor-pointer items-center self-center pr-5">
+        <div className="Title text-white font-thin cursor-pointer items-center self-center pl-3">
           <span className=" font-bold" onClick={HomePage}>
             AMBIENT
           </span>{" "}
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
 
         <div className="NavSites text-white">
-          <ul className="flex flex-row space-x-4  lg:gap-8 md:gap-8 gap-1 items-center">
+          <ul className="flex flex-row space-x-4  lg:gap-6 md:gap-6 gap-0 items-center">
             <li className="">
               <a
                 className="navTags"
