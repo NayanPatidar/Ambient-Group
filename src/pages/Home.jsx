@@ -181,7 +181,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       </div>
 
       <div
-        // data-aos="fade-up"
+        data-aos="fade-up"
         className=" flex lg:flex-row md:flex-row flex-col justify-around h-96 mt-56 border-t border-black pt-16"
       >
         <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0  ">WHAT THEY SAY</div>
@@ -192,7 +192,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           </p>
           <a className="text-orange-400">SHREEYANSH, PRESIDENT</a>
         </div>
-        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4 h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-xs ml-8 pl-2 font-serif flex flex-col justify-between">
+        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4 h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm ml-8 pl-2 font-serif flex flex-col justify-between">
           <p>
             " Having worked with Nayan since 1998 and April since its inception
             in 2009 we are proud of our relationship, the assets they have
@@ -204,7 +204,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       </div>
 
       <div className=" bg-black h-96 w-full mt-24 flex flex-row p-9 justify-between">
-        <div className=" w-4/6 text-white lg:text-3xl md:text-2xl sm:text-2xl text-xs items-center pt-8 pr-6 leading-normal">
+        <div className=" w-4/6 text-white lg:text-3xl md:text-2xl sm:text-2xl text-sm items-center pt-8 pr-6 leading-normal">
           We pride ourselves on owning and managing quality, legacy style assets
           designed to create long lasting communities and improve the wellbeing
           of the people who occupy them
