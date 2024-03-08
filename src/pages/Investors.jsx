@@ -45,7 +45,7 @@ export default function Investors({
             markets.
           </p>
         </div>
-        <div className="mt-10 w-2/5 lg: md: self-center">
+        <div className="mt-10 md:w-2/5 lg:w-2/5 w-4/5 lg: md: self-center">
           <img
             // data-aos="fade-up"
             className=" min-w-28"
@@ -85,7 +85,7 @@ export default function Investors({
         </div>
         <div
           data-aos="fade-up"
-          className=" lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="mt-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             2
@@ -100,7 +100,7 @@ export default function Investors({
         </div>
         <div
           data-aos="fade-up"
-          className=" lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="mt-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             3
@@ -113,7 +113,7 @@ export default function Investors({
         </div>
         <div
           data-aos="fade-up"
-          className="  lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="mt-5  lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             4
@@ -131,7 +131,7 @@ export default function Investors({
         <div data-aos="fade-up" className=" lg:text-4xl md:text-3xl text-xl mt-8">
           FEATURED ADVANTAGES
         </div>
-        <div className=" flex lg:flex-row md:flex-row flex-col w-full mt-24">
+        <div className="mt-5 flex lg:flex-row md:flex-row flex-col w-full mt-24">
           <div
             data-aos="fade-up"
             className=" lg:w-1/3 md:w-1/3  flex flex-col p-6 border border-white border-b-0 border-r-0 border-l-black border-t-0"
@@ -147,7 +147,7 @@ export default function Investors({
           </div>
           <div
             data-aos="fade-up"
-            className=" lg:w-1/3 md:w-1/3 flex flex-col p-6 border border-white border-b-0 border-r-0 border-l-black border-t-0"
+            className="mt-5 lg:w-1/3 md:w-1/3 flex flex-col p-6 border border-white border-b-0 border-r-0 border-l-black border-t-0"
           >
             <img
               className=" w-24"

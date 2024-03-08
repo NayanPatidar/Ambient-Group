@@ -76,7 +76,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
           <div
             data-aos="fade-up"
-            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full ml-5 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full pl-5 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
@@ -94,10 +94,10 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        <div className=" flex lg:flex-row md:flex-row flex-col justify-between">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-16">
           <div
             data-aos="fade-up"
-            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full ml-0 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full pl-0 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-16"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
@@ -116,8 +116,8 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           </div>
 
           <div
-            // data-aos="fade-up"
-            className=" flex flex-row justify-around  lg:w-6/12 md:w-6/12 sm:w-6/12 w-full xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
+            data-aos="fade-up"
+            className=" flex flex-row justify-around  lg:w-6/12 md:w-6/12 sm:w-6/12 w-full xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-16"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
@@ -136,7 +136,7 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
             </div>
           </div>
         </div>
-        <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-5">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-16">
           <div
             data-aos="fade-up"
             className="flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full"
@@ -160,14 +160,14 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
 
           <div
             data-aos="fade-up"
-            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full ml-5 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full pl-5 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-5"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div className="mr-12">
+            <div className="mr-10">
               <div className="img-container bg-orange-600">
                 <img src="/public/images/Commercials/Eight.jpg" />
               </div>
@@ -185,14 +185,14 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
         className=" flex lg:flex-row md:flex-row flex-col justify-around h-96 mt-56 border-t border-black pt-16"
       >
         <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0  ">WHAT THEY SAY</div>
-        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4  h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm pl-5 font-serif flex flex-col justify-between">
+        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4  h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm ml-8 pl-2 font-serif flex flex-col justify-between">
           <p>
             " April provides us the opportunity to invest into smart and unique,
             value add property deals."
           </p>
           <a className="text-orange-400">SHREEYANSH, PRESIDENT</a>
         </div>
-        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4 h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-xs pl-5 font-serif flex flex-col justify-between">
+        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4 h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-xs ml-8 pl-2 font-serif flex flex-col justify-between">
           <p>
             " Having worked with Nayan since 1998 and April since its inception
             in 2009 we are proud of our relationship, the assets they have
