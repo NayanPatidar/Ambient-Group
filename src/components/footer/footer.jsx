@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div className=" flex flex-row justify-around h-96 w-full bg-black pt-16 border-white border-t z-10">
-      <div className="w-1/3 h-56 text-white flex flex-col justify-between">
+      <div className="w-1/3 h-56 text-white flex flex-col justify-between pl-2">
         <span className=" className=" font-bold lg:text-lg md:text-lg sm:text-lg text-xs> 
           <span >
             AMBIENT
