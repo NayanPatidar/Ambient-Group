@@ -181,18 +181,18 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
       </div>
 
       <div
-        data-aos="fade-up"
-        className=" flex flex-row justify-around h-96 w-full mt-56 border-t border-black pt-16"
+        // data-aos="fade-up"
+        className=" flex lg:flex-row md:flex-row flex-col justify-around h-96 mt-56 border-t border-black pt-16"
       >
-        <div className="w-1/4 h-80 text-center ">WHAT THEY SAY</div>
-        <div className=" lg:w-1/4 md:w-1/4 h-72 border-l border-black lg:text-xl md:text-xl text-sm pl-5 font-serif flex flex-col justify-between">
+        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0  ">WHAT THEY SAY</div>
+        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4  h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm pl-5 font-serif flex flex-col justify-between">
           <p>
             " April provides us the opportunity to invest into smart and unique,
             value add property deals."
           </p>
-          <a className="text-orange-400">SHREEYANSH, VP</a>
+          <a className="text-orange-400">SHREEYANSH, PRESIDENT</a>
         </div>
-        <div className=" lg:w-1/4 md:w-1/4  h-72 border-l border-black lg:text-xl md:text-xl text-xs pl-5 font-serif flex flex-col justify-between">
+        <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4 h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-xs pl-5 font-serif flex flex-col justify-between">
           <p>
             " Having worked with Nayan since 1998 and April since its inception
             in 2009 we are proud of our relationship, the assets they have
