@@ -20,7 +20,7 @@ export default function HarmonyHavenPage({
   };
   return (
     <div
-      className={`HarmonyHavenMain flex flex-col justify-center items-center bg-white z-1 absolute          
+      className={`HarmonyHavenMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
       ${isMouseOver ? "left-onHover" : ""}
     ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
       onClick={handleClick}
@@ -30,10 +30,10 @@ export default function HarmonyHavenPage({
 
         <div
           data-aos="fade-up"
-          className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
+          className="line font-body font-thin text-white pt-40 w-5/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin  text-6xl">HARMONY HAVEN</h2>
-          <p className=" titleLineUp font-thin  text-2xl">
+          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">HARMONY HAVEN</h2>
+          <p className=" titleLineUp font-thin text-lg">
             1st Street, West City, Nairobi
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function HarmonyHavenPage({
         data-aos="fade-up"
         className=" HarmonyHavenDescription flex flex-col justify-center p-10"
       >
-        <h3 className=" describeHarmony">
+        <h3 className=" describeHarmony lg:text-2xl md:text-2xl text-lg lg:w-7/12 md:w-7/12 w-full lg:pl-10 md:pl-10 ">
           Pines Manor is an elegant residence nestled in the heart of Auckland's
           bustling city center. This historic manor exudes charm and
           sophistication with its distinctive Victorian architecture and
@@ -61,25 +61,25 @@ export default function HarmonyHavenPage({
           data-aos="fade-up"
           className=" keyInfo flex flex-col gap-3 justify-start w-11/12"
         >
-          <div className=" ml-10">KEY INFO</div>
-          <div className="flex flex-row gap-3 justify-start w-11/12 ml-10 mt-5">
-            <div className=" w-1/6 h-48 border border-black border-t-0 border-r-0 border-b-0 pl-3">
+          <div className=" lg:ml-10 md:ml-10">KEY INFO</div>
+          <div className="flex lg:flex-row md:flex-row flex-col gap-3 justify-start w-11/12 lg:ml-10 md:ml-10 mt-5">
+            <div className="lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3">
               <p className=" text-sm">TYPE</p>
               <div className=" text-2xl">Residential</div>
             </div>
-            <div className=" w-1/6 h-48 border border-black border-t-0 border-r-0 border-b-0 pl-3">
+            <div className="mt-5 lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3">
               <p className=" text-sm">CONSTRUCTION DATE</p>
               <div>2000</div>
             </div>
-            <div className=" w-1/6 h-48 border border-black border-t-0 border-r-0 border-b-0 pl-3">
+            <div className="mt-5 lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3">
               <p className=" text-sm">SIZE</p>
               <div>620sqm</div>
             </div>
-            <div className=" w-1/6 h-48 border border-black border-t-0 border-r-0 border-b-0 pl-3">
+            <div className="mt-5 lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3">
               <p className=" text-sm">FLOORS</p>
               <div>3</div>
             </div>
-            <div className=" w-1/6 h-48 border border-black border-t-0 border-r-0 border-b-0 pl-3 ">
+            <div className="mt-5 lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3 ">
               <p className=" text-sm">TENANTS</p>
               <div>Svitzer Australia</div>
             </div>
@@ -93,12 +93,12 @@ export default function HarmonyHavenPage({
           />
           <div className="flex flex-col justify-around">
             <img
-              className=" w-1/2 mt-5 mb-5"
+              className=" lg:w-1/2 md:w-1/2 mt-5 mb-5"
               src="https://www.gogetyourself.com/wp-content/uploads/2021/06/Exposed-Brick-Interior-Ideas.jpg"
               alt="Image 1"
             />{" "}
             <img
-              className=" self-end w-1/2 mt-5 mb-5"
+              className=" self-end lg:w-1/2 md:w-1/2 mt-5 mb-5"
               src="https://www.aprilgroup.com.au/media/3myneag1/commercial-entry-walkway.jpg"
               alt="Image 1"
             />
@@ -113,7 +113,7 @@ export default function HarmonyHavenPage({
               data-aos="fade-up"
               className=" flex flex-row justify-around mt-10"
             >
-              <div className=" grid grid-cols-3 gap-4 w-8/12 h-48 border border-black border-t-0 border-r-0 border-b-0 ">
+              <div className=" grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 gap-4 lg:w-8/12 md:w-8/12 w-fullborder border-black border-t-0 border-r-0 border-b-0 ">
                 <div className="pl-5 text-lg text-gray-700 flex flex-row items-center">
                   <CiTimer className=" mr-2" /> 24/7 Building Manager
                 </div>
@@ -142,7 +142,7 @@ export default function HarmonyHavenPage({
                   Street Frontage
                 </div>
               </div>
-              <div className=" w-3/12 h-48 border border-black border-t-0 border-r-0 border-b-0"></div>
+              <div className=" w-3/12 h-48 border border-black border-t-0 border-r-0 border-b-0 border-l-0 "></div>
             </div>
           </div>
         </div>

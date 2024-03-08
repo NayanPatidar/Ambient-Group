@@ -1,6 +1,13 @@
 .HarmonyHavenMain {
-  width: 1180px;
+  width: 1150px;
   transition: transform 0.6s ease-in-out;
+  min-width: 250px;
+}
+
+@media (max-width: 1200px) {
+  .HarmonyHavenMain {
+    width: 100%;
+  }
 }
 
 .HarmonyHavenBackground {

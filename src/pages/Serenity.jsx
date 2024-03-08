@@ -26,7 +26,7 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
         <Navbar />
 
         <div
-          // data-aos="fade-up"
+          data-aos="fade-up"
           className="line font-body font-thin text-white pt-40 w-5/6 pl-8 "
         >
           <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">SERENITY COTTAGE</h2>
