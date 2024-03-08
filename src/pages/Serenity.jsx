@@ -30,7 +30,7 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           className="line font-body font-thin text-white pt-40 w-5/6 pl-8 "
         >
           <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">SERENITY COTTAGE</h2>
-          <p className=" titleLineUp font-thin  text-lg">
+          <p className=" titleLineUp font-thin text-lg">
             123 Main Street, Auckland, New Zealand
           </p>
         </div>
