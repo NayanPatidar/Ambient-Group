@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/nav.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { HiOutlineViewList } from "react-icons/hi";
 
 const Navbar = () => {
+  const matches = useMediaQuery("(min-width:1180px)");
+
   const HomePage = () => {
     window.location.href = `/`;
   };
 
   const toNavBarLinks = (route) => {
     window.location.href = `/${route}`;
+  };
+
+  const viewListClicker = () => {
+    console.log("Clicker !!");
   };
 
   return (
@@ -21,7 +29,7 @@ const Navbar = () => {
         </div>
 
         <div className="NavSites text-white">
-          <ul className="flex flex-row space-x-4  lg:gap-6 md:gap-6 gap-0 items-center">
+          <ul className="flex flex-row space-x-4  lg:gap-6 md:gap-2 gap-0 items-center justify-center">
             <li className="">
               <a
                 className="navTags"
@@ -39,6 +47,18 @@ const Navbar = () => {
               >
                 ABOUT
               </a>
+            </li>
+            <li>
+              {!matches ? (
+                <a>
+                  <HiOutlineViewList
+                    className=" scale-150"
+                    onClick={() => viewListClicker()}
+                  />
+                </a>
+              ) : (
+                ""
+              )}
             </li>
           </ul>
         </div>
