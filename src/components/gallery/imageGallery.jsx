@@ -1,30 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/gallery.css";
+import { DrawerContext } from "../../Context/Drawer";
 
 const ImageGallery = ({ data }) => {
+
+  const { onTopPage, setIsOnTopPage } = useContext(DrawerContext);
 
   const handleRedirect = (redirectLink) => {
     console.log(`Redirecting to - ${redirectLink}`);
     window.location.href = redirectLink;
   };
 
-
   return (
     <div className="image-container flex justify-center">
       <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-4 md:gap-4 gap-2 pl-1 pr-1 lg:w-auto lg:mr-4 md:mr-4">
         {data.map((item, index) => (
-          <div key={index} className=" image-item w-full" >
+          <div key={index} className=" image-item w-full">
             <div className=" imageDiv justify-items-end items-center align-middle self-center">
               <img
                 src={item.image}
                 alt={item.name}
                 className=" propImage w-52 h-36 "
                 onClick={() => handleRedirect(item.redirectLink)}
-                />
+              />
             </div>
-            <div className=" flex flex-row w-full justify-around">
-              <p className="text-white text-sm">{item.name}</p>
-              <p className="text-white text-sm">{item.place}</p>
+            <div
+              className=" flex flex-row w-full justify-around"
+              style={{
+                color: onTopPage ? "white" : "black",
+                transition: "background-color 0.3s ease",
+              }}
+            >
+              <p className=" text-sm">{item.name}</p>
+              <p className=" text-sm">{item.place}</p>
             </div>
           </div>
         ))}

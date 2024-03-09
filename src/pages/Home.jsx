@@ -1,35 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GoArrowDown } from "react-icons/go";
 import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../components/footer/footer";
+import { DrawerContext } from "../Context/Drawer";
 
-const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
-  const [viewProp, setViewProp] = useState(false);
-  const handleClick = () => {
-    handleHomeClick(false);
+const TopPage = () => {
+  const { onTopPage, setIsOnTopPage } = useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
-
-  const handleViewProps = (viewAllowed) => {
-    console.log(`${viewAllowed} - Data Recived from the Nav Bar`);
-    setViewProp(true);
-  };
-
-  useEffect(() => {});
 
   return (
     <div
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0
-         ${isMouseOver ? "left-onHover" : ""}
-        ${MouseClicked ? "left-HideOn" : "left-HideOff"}
-        ${viewProp ? "left-DrawOn" : "left-HideOff"}
+      ${onTopPage ? "" : "HideOn"}
         `}
-      onClick={handleClick}
+      onClick={() => handleTopPageClicked()}
     >
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
-        <Navbar viewProperties={handleViewProps} />
+        <Navbar />
 
         <div className="HomeDataDiv font-thin text-white  w-5/6 pl-8  ">
           <h2 className="HomeDesc sm:pt-10 md:pt-5 pt-5 text-2xl xs:text-3xl sm:text-3xl md:text-5xl lg:text-6xl">

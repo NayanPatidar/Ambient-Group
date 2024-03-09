@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import ImageGallery from "../components/gallery/imageGallery";
 import data from "../backend/db/detailsProp.jsx";
 import "../styles/listProperties.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { HiOutlineViewList } from "react-icons/hi";
+import { DrawerContext } from "../Context/Drawer.jsx";
 
-export default function Properties({ isMouseOver, isMouseClicked }) {
+export default function Properties({}) {
   const [selectedItem, setSelectedItem] = useState("ALL");
   const [selectedTypeProperty, setTypeProperty] = useState("ALL PROPERTIES");
   const matches = useMediaQuery("(min-width:1180px)");
+  const { onTopPage, setIsOnTopPage } = useContext(DrawerContext);
 
   const items = [
     "ALL",
@@ -25,14 +28,16 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
-    // console.log(`${item} : isSelected from the Item Type `);
     filterImages();
   };
 
   const handlePropertyTypeClick = (type) => {
     setTypeProperty(type);
-    // console.log(`${type} : isSelected from the Property Type `);
   };
+
+  const PropertyClick = () => {
+    setIsOnTopPage(false);
+  }
 
   const filterImages = () => {
     const filteredData = data.filter((item) => {
@@ -58,32 +63,44 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
 
   return (
     <div
-      className="MainProperty w-screen   h-screen fixed overflow-auto overflow-y-scroll "
+      className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll "
       style={{
-        backgroundColor: isMouseClicked ? "#EB8B2E" : "black",
+        backgroundColor: onTopPage ? "#EB8B2E" : "black",
         transition: "background-color 0.3s ease",
       }}
+      onClick={() => PropertyClick()}
     >
       <div className=" flex flex-row justify-end">
-        <div className="MainPropertyData flex flex-col justify-between">
-          <div className=" flex flex-row justify-between text-black text-xl font-medium pl-5 pt-8">
-            <div className=" w-11/12 text-white ">OUR PROPERTIES</div>
+        <div className=" flex flex-col justify-between">
+          <div className=" flex flex-row justify-between text-black text-xl font-medium mt-8">
+            {!matches ? (
+              <span>
+                <HiOutlineViewList className=" w-auto scale-150 text-white h-6 pl-4" />
+              </span>
+            ) : null}
+            <div className="flex w-11/12 text-white pl-5 h-8">
+              OUR PROPERTIES
+            </div>
             <div className=" mt-1">
-              <div className="PropHeadingDetails w-7 flex flex-col justify-start items-center text-sm mr-8  ">
-                <GoDotFill className=" mb-8 w-8 rotate-90 text-2xl" />
-                <span
-                  className={`propertiesMark w-26  rotate-90 
-                  ${isMouseOver ? "GetUnderline" : ""}
+              <div>
+                {matches ? (
+                  <div className="PropHeadingDetails w-7 flex flex-col justify-start items-center text-sm mr-8  ">
+                    <GoDotFill className=" mb-8 w-8 rotate-90 text-2xl" />
+                    <span
+                      className={`propertiesMark w-26  rotate-90 
                   `}
-                >
-                  PROPERTIES
-                </span>
+                      // ${isMouseOver ? "GetUnderline" : ""}
+                    >
+                      PROPERTIES
+                    </span>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
 
           <div className=" flex flex-col gap-4 text-md font-semidark p-6">
-            <div className=" pl-5">
+            <div>
               <ul>
                 {matches ? (
                   <div
@@ -109,39 +126,35 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
               </ul>
             </div>
 
-            <div className=" ">
-              <div className=" pl-5">
-                <div>
-                  <ul className=" ">
-                    {matches ? (
-                      <div className=" flex flex-row gap-4 ">
-                        <span
-                          className=" "
-                          style={{ fontWeight: 400, fontSize: 16 }}
-                        >
-                          FILTER BY:
-                        </span>
-                        {items.map((item, index) => (
-                          <li
-                            key={index}
-                            onClick={() => handleItemClick(item)}
-                            className="propItem"
-                            style={{
-                              fontWeight: 400,
-                              color:
-                                selectedItem === item
-                                  ? "white"
-                                  : "rgba(0, 0, 0, 0.4)",
-                            }}
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </div>
-                    ) : null}
-                  </ul>
-                </div>
-              </div>
+            <div>
+              <ul>
+                {matches ? (
+                  <div className=" flex flex-row gap-4 ">
+                    <span
+                      className=" "
+                      style={{ fontWeight: 400, fontSize: 16 }}
+                    >
+                      FILTER BY:
+                    </span>
+                    {items.map((item, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handleItemClick(item)}
+                        className="propItem"
+                        style={{
+                          fontWeight: 400,
+                          color:
+                            selectedItem === item
+                              ? "white"
+                              : "rgba(0, 0, 0, 0.4)",
+                        }}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </div>
+                ) : null}
+              </ul>
             </div>
           </div>
           <div className="mb-10">

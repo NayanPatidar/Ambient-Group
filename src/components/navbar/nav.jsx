@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "../../styles/nav.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { HiOutlineViewList } from "react-icons/hi";
+import { DrawerContext } from "../../Context/Drawer";
 
-const Navbar = ({ viewProperties }) => {
+const Navbar = ({}) => {
   const matches = useMediaQuery("(min-width:1180px)");
+  // const { isDrawerAllowed, setDrawerAllow } = useContext(DrawerContext);
 
   const HomePage = () => {
     window.location.href = `/`;
@@ -14,6 +16,10 @@ const Navbar = ({ viewProperties }) => {
     window.location.href = `/${route}`;
   };
 
+  const handleViewListClick = () => {
+    // setDrawerAllow(true);
+  };
+  
   return (
     <div className="navigation-bar">
       <div className="flex flex-row justify-between items-center mt-8 ">
@@ -49,7 +55,7 @@ const Navbar = ({ viewProperties }) => {
                 <a>
                   <HiOutlineViewList
                     className=" scale-150"
-                    onClick={() => viewProperties(true)}
+                    onClick={handleViewListClick()}
                   />
                 </a>
               ) : (
