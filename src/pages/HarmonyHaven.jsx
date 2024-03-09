@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/harmonyhaven.css";
 import { CiTimer } from "react-icons/ci";
 import Navbar from "../components/navbar/nav";
@@ -10,20 +10,24 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
-export default function HarmonyHavenPage({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+import { DrawerContext } from "../Context/Drawer";
+
+export default function HarmonyHavenPage() {
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, isOnHover } =
+    useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
+
   return (
     <div
       className={`HarmonyHavenMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
+      onClick={() => handleTopPageClicked()}
     >
       <div className=" HarmonyHavenBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
@@ -32,7 +36,9 @@ export default function HarmonyHavenPage({
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-40 w-5/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">HARMONY HAVEN</h2>
+          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">
+            HARMONY HAVEN
+          </h2>
           <p className=" titleLineUp font-thin text-lg">
             1st Street, West City, Nairobi
           </p>
@@ -104,8 +110,11 @@ export default function HarmonyHavenPage({
             />
           </div>
         </div>
-        <div  className=" w- bg-slate-200">
-          <div data-aos="fade-up" className="  SerenityFeatures flex flex-col mt-16 mb-16 ">
+        <div className=" w- bg-slate-200">
+          <div
+            data-aos="fade-up"
+            className="  SerenityFeatures flex flex-col mt-16 mb-16 "
+          >
             <div data-aos="fade-up" className=" ml-6 text-4xl text-gray-700 ">
               PROPERTY FEATURES
             </div>

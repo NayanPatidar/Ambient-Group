@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/singapore.css";
 import { CiTimer } from "react-icons/ci";
 import Navbar from "../components/navbar/nav";
@@ -10,20 +10,24 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
-export default function MoonlitMiragePage({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+import { DrawerContext } from "../Context/Drawer";
+
+export default function MoonlitMiragePage() {
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, isOnHover } =
+    useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
+
   return (
     <div
       className={`MoonlitMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0     
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
+      onClick={() => handleTopPageClicked()}
     >
       <div className=" MoonlitBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />

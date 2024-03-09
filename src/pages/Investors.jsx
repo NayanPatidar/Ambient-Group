@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/investors.css";
 import Navbar from "../components/navbar/nav";
 import Footer from "../components/footer/footer";
+import { DrawerContext } from "../Context/Drawer";
 
-export default function Investors({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+export default function Investors() {
+  const {
+    onTopPage,
+    setIsOnTopPage,
+    isDrawerAllowed,
+    isOnHover,
+    setIsOnHover,
+  } = useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
   return (
     <div
       className={`InvestorsMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
-        ${isMouseOver ? "left-onHover" : ""}
-        ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
+      onClick={() => handleTopPageClicked()}
     >
       <div className="InvestorsBackground flex flex-col bg-cover bg-center h-screen">
         <Navbar />
@@ -39,7 +46,10 @@ export default function Investors({
           >
             INVESTING WITH AMBIENT GROUP
           </h2>
-          <p data-aos="fade-up" className="md:w-4/5 lg:w-3/5  text-xl md:text-xl lg:text-2xl lg:tracking-wider lg:leading-relaxed ">
+          <p
+            data-aos="fade-up"
+            className="md:w-4/5 lg:w-3/5  text-xl md:text-xl lg:text-2xl lg:tracking-wider lg:leading-relaxed "
+          >
             We cultivate and cultivate thriving commercial property investments
             globally, tailored for the Ambient Group's success in diverse
             markets.
@@ -68,7 +78,7 @@ export default function Investors({
         </div>
         <div className=" w-2/5"></div>
       </div>
-      
+
       <div className=" w-full lg:h-96 flex lg:flex-row md:flex-row flex-col justify-around p-10 gap-1">
         <div
           data-aos="fade-up"
@@ -127,8 +137,11 @@ export default function Investors({
         </div>
       </div>
 
-      <div className=" w-full bg-orange-500 p-10 flex flex-col"> 
-        <div data-aos="fade-up" className=" lg:text-4xl md:text-3xl text-xl mt-8">
+      <div className=" w-full bg-orange-500 p-10 flex flex-col">
+        <div
+          data-aos="fade-up"
+          className=" lg:text-4xl md:text-3xl text-xl mt-8"
+        >
           FEATURED ADVANTAGES
         </div>
         <div className="flex lg:flex-row md:flex-row flex-col w-full mt-24">
@@ -172,7 +185,7 @@ export default function Investors({
             </p>
           </div>
         </div>
-    </div>
+      </div>
       <Footer />
     </div>
   );
