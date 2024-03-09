@@ -11,7 +11,7 @@ export default function Properties({}) {
   const [selectedItem, setSelectedItem] = useState("ALL");
   const [selectedTypeProperty, setTypeProperty] = useState("ALL PROPERTIES");
   const matches = useMediaQuery("(min-width:1180px)");
-  const { onTopPage, setIsOnTopPage } = useContext(DrawerContext);
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, setDrawerAllow  } = useContext(DrawerContext);
 
   const items = [
     "ALL",
@@ -37,6 +37,10 @@ export default function Properties({}) {
 
   const PropertyClick = () => {
     setIsOnTopPage(false);
+  }
+
+  const ExitViewList = () => {
+    setDrawerAllow(false);
   }
 
   const filterImages = () => {
@@ -65,7 +69,7 @@ export default function Properties({}) {
     <div
       className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll "
       style={{
-        backgroundColor: onTopPage ? "#EB8B2E" : "black",
+        backgroundColor: onTopPage ? "black" : "#EB8B2E",
         transition: "background-color 0.3s ease",
       }}
       onClick={() => PropertyClick()}
@@ -75,7 +79,7 @@ export default function Properties({}) {
           <div className=" flex flex-row justify-between text-black text-xl font-medium mt-8">
             {!matches ? (
               <span>
-                <HiOutlineViewList className=" w-auto scale-150 text-white h-6 pl-4" />
+                <HiOutlineViewList className=" w-auto scale-150 text-white h-6 pl-4" onClick={() => ExitViewList()}/>
               </span>
             ) : null}
             <div className="flex w-11/12 text-white pl-5 h-8">

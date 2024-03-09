@@ -8,7 +8,8 @@ import Footer from "../components/footer/footer";
 import { DrawerContext } from "../Context/Drawer";
 
 const TopPage = () => {
-  const { onTopPage, setIsOnTopPage } = useContext(DrawerContext);
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, setDrawerAllow } =
+    useContext(DrawerContext);
 
   const handleTopPageClicked = () => {
     setIsOnTopPage(true);
@@ -18,6 +19,7 @@ const TopPage = () => {
     <div
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0
       ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
         `}
       onClick={() => handleTopPageClicked()}
     >

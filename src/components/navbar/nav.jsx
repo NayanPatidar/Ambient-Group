@@ -6,7 +6,7 @@ import { DrawerContext } from "../../Context/Drawer";
 
 const Navbar = ({}) => {
   const matches = useMediaQuery("(min-width:1180px)");
-  // const { isDrawerAllowed, setDrawerAllow } = useContext(DrawerContext);
+  const { isDrawerAllowed, setDrawerAllow } = useContext(DrawerContext);
 
   const HomePage = () => {
     window.location.href = `/`;
@@ -17,7 +17,7 @@ const Navbar = ({}) => {
   };
 
   const handleViewListClick = () => {
-    // setDrawerAllow(true);
+    setDrawerAllow(true);
   };
   
   return (
@@ -55,7 +55,7 @@ const Navbar = ({}) => {
                 <a>
                   <HiOutlineViewList
                     className=" scale-150"
-                    onClick={handleViewListClick()}
+                    onClick={() => handleViewListClick()}
                   />
                 </a>
               ) : (

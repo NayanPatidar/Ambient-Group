@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div className="background-container z-0">
-      <DrawerContext.Provider value={{ onTopPage, setIsOnTopPage }}>
+      <DrawerContext.Provider value={{ onTopPage, setIsOnTopPage, isDrawerAllowed, setDrawerAllow }}>
         <div>
           <Properties />
         </div>
