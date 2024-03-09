@@ -11,7 +11,7 @@
   }
 }
 
-.left-onHover {
+.onHover {
   transform: translateX(-3%);
 }
 

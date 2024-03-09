@@ -11,7 +11,8 @@ export default function Properties({}) {
   const [selectedItem, setSelectedItem] = useState("ALL");
   const [selectedTypeProperty, setTypeProperty] = useState("ALL PROPERTIES");
   const matches = useMediaQuery("(min-width:1180px)");
-  const { onTopPage, setIsOnTopPage, isDrawerAllowed, setDrawerAllow  } = useContext(DrawerContext);
+  const { onTopPage, setIsOnTopPage, setDrawerAllow, setIsOnHover } =
+    useContext(DrawerContext);
 
   const items = [
     "ALL",
@@ -37,11 +38,19 @@ export default function Properties({}) {
 
   const PropertyClick = () => {
     setIsOnTopPage(false);
-  }
+  };
 
   const ExitViewList = () => {
     setDrawerAllow(false);
-  }
+  };
+
+  const MouseEnter = () => {
+    setIsOnHover(true);
+  };
+
+  const MouseLeave = () => {
+    setIsOnHover(false);
+  };
 
   const filterImages = () => {
     const filteredData = data.filter((item) => {
@@ -73,13 +82,18 @@ export default function Properties({}) {
         transition: "background-color 0.3s ease",
       }}
       onClick={() => PropertyClick()}
+      onMouseEnter={() => MouseEnter()}
+      onMouseLeave={() => MouseLeave()}
     >
       <div className=" flex flex-row justify-end">
         <div className=" flex flex-col justify-between">
           <div className=" flex flex-row justify-between text-black text-xl font-medium mt-8">
             {!matches ? (
               <span>
-                <HiOutlineViewList className=" w-auto scale-150 text-white h-6 pl-4" onClick={() => ExitViewList()}/>
+                <HiOutlineViewList
+                  className=" w-auto scale-150 text-white h-6 pl-4"
+                  onClick={() => ExitViewList()}
+                />
               </span>
             ) : null}
             <div className="flex w-11/12 text-white pl-5 h-8">

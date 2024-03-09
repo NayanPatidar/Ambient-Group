@@ -20,6 +20,7 @@ export default function App() {
   const [isMouseClicked, setIsMouseClicked] = useState(false);
   const [isDrawerAllowed, setDrawerAllow] = useState(false);
   const [onTopPage, setIsOnTopPage] = useState(true);
+  const [isOnHover, setIsOnHover] = useState(false);
 
   useEffect(() => {
     if (isMouseClicked) {
@@ -31,7 +32,16 @@ export default function App() {
 
   return (
     <div className="background-container z-0">
-      <DrawerContext.Provider value={{ onTopPage, setIsOnTopPage, isDrawerAllowed, setDrawerAllow }}>
+      <DrawerContext.Provider
+        value={{
+          onTopPage,
+          setIsOnTopPage,
+          isDrawerAllowed,
+          setDrawerAllow,
+          isOnHover,
+          setIsOnHover,
+        }}
+      >
         <div>
           <Properties />
         </div>
