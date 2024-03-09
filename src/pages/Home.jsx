@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { GoArrowDown } from "react-icons/go";
 import Navbar from "../components/navbar/nav";
 import "../styles/home.css";
@@ -13,7 +13,6 @@ const TopPage = () => {
     setIsOnTopPage,
     isDrawerAllowed,
     isOnHover,
-    setIsOnHover,
   } = useContext(DrawerContext);
 
   const handleTopPageClicked = () => {

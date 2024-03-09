@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/serenity.css";
 import { CiTimer } from "react-icons/ci";
 import Navbar from "../components/navbar/nav";
@@ -10,17 +10,23 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
+import { DrawerContext } from "../Context/Drawer";
 
-const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
-  const handleClick = () => {
-    handleHomeClick(false);
+const SerenityCottage = () => {
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, isOnHover } =
+    useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
   return (
     <div
       className={`SerenityMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0         
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
+      onClick={() => handleTopPageClicked()}
     >
       <div className=" SerenityBackground  flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
@@ -29,7 +35,9 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-40 w-5/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">SERENITY COTTAGE</h2>
+          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">
+            SERENITY COTTAGE
+          </h2>
           <p className=" titleLineUp font-thin text-lg">
             123 Main Street, Auckland, New Zealand
           </p>
@@ -61,9 +69,7 @@ const SerenityCottage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
           <div className="flex lg:flex-row md:flex-row flex-col gap-3 justify-start w-11/12 lg:ml-10 md:ml-10 mt-5">
             <div className=" lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3">
               <p className=" text-sm">TYPE</p>
-              <div>
-                Boutique Retail & Creative Office Spaces
-              </div>
+              <div>Boutique Retail & Creative Office Spaces</div>
             </div>
             <div className=" mt-5 lg:w-1/6 bd:w-1/6  lg:h-48 md:h-48 border border-black border-t-0 border-r-0 lg:border-b-0 md:border-b-0 border-b-1 pl-3">
               <p className=" text-sm">CONSTRUCTION DATE</p>
