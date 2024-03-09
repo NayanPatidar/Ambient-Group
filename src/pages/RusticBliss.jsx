@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/buenosAires.css";
 import { CiTimer } from "react-icons/ci";
 import Navbar from "../components/navbar/nav";
@@ -10,20 +10,26 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
-export default function RusticBlissPage({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+import { DrawerContext } from "../Context/Drawer";
+export default function RusticBlissPage() {
+  const {
+    onTopPage,
+    setIsOnTopPage,
+    isDrawerAllowed,
+    isOnHover,
+    setIsOnHover,
+  } = useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
   return (
     <div
       className={`RusticBlissMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
     >
       <div className=" RusticBlissBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
@@ -32,7 +38,9 @@ export default function RusticBlissPage({
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">RUSTIC BLISS</h2>
+          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">
+            RUSTIC BLISS
+          </h2>
           <p className=" titleLineUp font-thin text-lg">
             123 Pine Avenue, Window Palace, Buenos Aires
           </p>
@@ -106,7 +114,10 @@ export default function RusticBlissPage({
             <div data-aos="fade-up" className=" ml-6 text-4xl text-gray-700 ">
               PROPERTY FEATURES
             </div>
-            <div data-aos="fade-up" className=" flex flex-row justify-around mt-10">
+            <div
+              data-aos="fade-up"
+              className=" flex flex-row justify-around mt-10"
+            >
               <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 gap-4 lg:w-8/12 md:w-8/12 w-full border border-black border-t-0 border-r-0 border-b-0 ">
                 <div className="pl-5 text-lg text-gray-700 flex flex-row items-center">
                   <CiTimer className=" mr-2" /> 24/7 Building Manager

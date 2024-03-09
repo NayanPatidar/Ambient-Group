@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/pinesmanor.css";
 import { CiTimer } from "react-icons/ci";
 import Navbar from "../components/navbar/nav";
@@ -10,21 +10,24 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
+import { DrawerContext } from "../Context/Drawer";
 
-export default function PinesManorPage({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+export default function PinesManorPage() {
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, isOnHover } =
+    useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
+
   return (
     <div
       className={`PinesManorMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0         
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
+      onClick={() => handleTopPageClicked()}
     >
       <div className=" PinesBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
@@ -33,7 +36,9 @@ export default function PinesManorPage({
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl">PINES MANOR</h2>
+          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+            PINES MANOR
+          </h2>
           <p className=" titleLineUp font-thin text-lg lg:text-xl">
             123 Pine Avenue, Auckland Central, New Zealand
           </p>
