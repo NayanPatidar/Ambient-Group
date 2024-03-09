@@ -3,10 +3,12 @@ import { GoDotFill } from "react-icons/go";
 import ImageGallery from "../components/gallery/imageGallery";
 import data from "../backend/db/detailsProp.jsx";
 import "../styles/listProperties.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Properties({ isMouseOver, isMouseClicked }) {
   const [selectedItem, setSelectedItem] = useState("ALL");
   const [selectedTypeProperty, setTypeProperty] = useState("ALL PROPERTIES");
+  const matches = useMediaQuery("(min-width:1180px)");
 
   const items = [
     "ALL",
@@ -64,8 +66,8 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
     >
       <div className=" flex flex-row justify-end">
         <div className="MainPropertyData flex flex-col justify-between">
-          <div className=" flex flex-row justify-between text-black text-xl font-medium h-40 pl-10 pt-8">
-            <div className=" w-11/12 ">OUR PROPERTIES</div>
+          <div className=" flex flex-row justify-between text-black text-xl font-medium pl-5 pt-8">
+            <div className=" w-11/12 text-white ">OUR PROPERTIES</div>
             <div className=" mt-1">
               <div className="PropHeadingDetails w-7 flex flex-col justify-start items-center text-sm mr-8  ">
                 <GoDotFill className=" mb-8 w-8 rotate-90 text-2xl" />
@@ -80,60 +82,69 @@ export default function Properties({ isMouseOver, isMouseClicked }) {
             </div>
           </div>
 
-          <div className=" h-28 flex flex-col gap-4 text-md font-semidark p-6">
+          <div className=" flex flex-col gap-4 text-md font-semidark p-6">
             <div className=" pl-5">
-              <ul
-                className="flex flex-row gap-8"
-                style={{ fontWeight: 400, fontSize: 16 }}
-              >
-                {itemsTypes.map((item, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handlePropertyTypeClick(item)}
-                    className="propItem"
-                    style={{
-                      fontWeight: 400,
-                      color: selectedTypeProperty === item ? "white" : "black",
-                    }}
+              <ul>
+                {matches ? (
+                  <div
+                    className="flex flex-row gap-8"
+                    style={{ fontWeight: 400, fontSize: 16 }}
                   >
-                    {item}
-                  </li>
-                ))}
+                    {itemsTypes.map((item, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handlePropertyTypeClick(item)}
+                        className="propItem"
+                        style={{
+                          fontWeight: 400,
+                          color:
+                            selectedTypeProperty === item ? "white" : "black",
+                        }}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </div>
+                ) : null}
               </ul>
             </div>
 
             <div className=" ">
               <div className=" pl-5">
                 <div>
-                  <ul className=" flex flex-row gap-4 ">
-                    <span
-                      className=" "
-                      style={{ fontWeight: 400, fontSize: 16 }}
-                    >
-                      FILTER BY:
-                    </span>
-                    {items.map((item, index) => (
-                      <li
-                        key={index}
-                        onClick={() => handleItemClick(item)}
-                        className="propItem"
-                        style={{
-                          fontWeight: 400,
-                          color:
-                            selectedItem === item
-                              ? "white"
-                              : "rgba(0, 0, 0, 0.4)",
-                        }}
-                      >
-                        {item}
-                      </li>
-                    ))}
+                  <ul className=" ">
+                    {matches ? (
+                      <div className=" flex flex-row gap-4 ">
+                        <span
+                          className=" "
+                          style={{ fontWeight: 400, fontSize: 16 }}
+                        >
+                          FILTER BY:
+                        </span>
+                        {items.map((item, index) => (
+                          <li
+                            key={index}
+                            onClick={() => handleItemClick(item)}
+                            className="propItem"
+                            style={{
+                              fontWeight: 400,
+                              color:
+                                selectedItem === item
+                                  ? "white"
+                                  : "rgba(0, 0, 0, 0.4)",
+                            }}
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </div>
+                    ) : null}
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" pl-11 mb-10">
+          <div className="mb-10">
             <ImageGallery data={filterImages()} />
           </div>
         </div>

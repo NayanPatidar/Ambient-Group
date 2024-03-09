@@ -7,20 +7,29 @@ import "aos/dist/aos.css";
 import Footer from "../components/footer/footer";
 
 const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
+  const [viewProp, setViewProp] = useState(false);
   const handleClick = () => {
     handleHomeClick(false);
   };
+
+  const handleViewProps = (viewAllowed) => {
+    console.log(`${viewAllowed} - Data Recived from the Nav Bar`);
+    setViewProp(true);
+  };
+
+  useEffect(() => {});
 
   return (
     <div
       className={`MainHome flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0
          ${isMouseOver ? "left-onHover" : ""}
         ${MouseClicked ? "left-HideOn" : "left-HideOff"}
+        ${viewProp ? "left-DrawOn" : "left-HideOff"}
         `}
       onClick={handleClick}
     >
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
-        <Navbar />
+        <Navbar viewProperties={handleViewProps} />
 
         <div className="HomeDataDiv font-thin text-white  w-5/6 pl-8  ">
           <h2 className="HomeDesc sm:pt-10 md:pt-5 pt-5 text-2xl xs:text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
@@ -184,7 +193,9 @@ const TopPage = ({ isMouseOver, MouseClicked, handleHomeClick }) => {
         data-aos="fade-up"
         className=" flex lg:flex-row md:flex-row flex-col justify-around h-96 mt-56 border-t border-black pt-16"
       >
-        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0  ">WHAT THEY SAY</div>
+        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0  ">
+          WHAT THEY SAY
+        </div>
         <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4  h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm ml-8 pl-2 font-serif flex flex-col justify-between">
           <p>
             " April provides us the opportunity to invest into smart and unique,

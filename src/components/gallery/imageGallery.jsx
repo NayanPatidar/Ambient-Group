@@ -10,15 +10,15 @@ const ImageGallery = ({ data }) => {
 
 
   return (
-    <div className="image-container">
-      <div className="grid grid-cols-4 gap-4">
+    <div className="image-container flex justify-center">
+      <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-4 md:gap-4 gap-2 pl-1 pr-1 lg:w-auto lg:mr-4 md:mr-4">
         {data.map((item, index) => (
-          <div key={index} className="image-item w-11/12" >
-            <div className=" imageDiv">
+          <div key={index} className=" image-item w-full" >
+            <div className=" imageDiv justify-items-end items-center align-middle self-center">
               <img
                 src={item.image}
                 alt={item.name}
-                className=" propImage w-52 h-36"
+                className=" propImage w-52 h-36 "
                 onClick={() => handleRedirect(item.redirectLink)}
                 />
             </div>

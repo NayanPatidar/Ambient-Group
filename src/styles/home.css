@@ -20,6 +20,11 @@
   transition: transform 0.6s ease-in-out, opacity 1s ease-in-out;
 }
 
+.left-DrawOn {
+  transform: translateX(-100%);
+  
+}
+
 .MainBackground {
   animation: change 30s infinite ease-in-out;
 }

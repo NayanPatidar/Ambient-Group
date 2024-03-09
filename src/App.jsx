@@ -55,7 +55,7 @@ export default function App() {
       >
         <Properties isMouseOver={isMouseOver} isMouseClicked={isMouseClicked} />
       </div>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route
             path="/"
@@ -168,7 +168,7 @@ export default function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }

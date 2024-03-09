@@ -3,7 +3,7 @@ import "../../styles/nav.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { HiOutlineViewList } from "react-icons/hi";
 
-const Navbar = () => {
+const Navbar = ({ viewProperties }) => {
   const matches = useMediaQuery("(min-width:1180px)");
 
   const HomePage = () => {
@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const viewListClicker = () => {
     console.log("Clicker !!");
+    viewProperties(true);
   };
 
   return (
