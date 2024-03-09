@@ -10,21 +10,29 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
+import { useContext } from "react";
+import { DrawerContext } from "../Context/Drawer";
 
-export default function EnchartedPage({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+export default function EnchartedPage() {
+  const {
+    onTopPage,
+    setIsOnTopPage,
+    isDrawerAllowed,
+    isOnHover,
+    setIsOnHover,
+  } = useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
   return (
     <div
       className={`EnchartedMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}
+        `}
+      onClick={() => handleTopPageClicked()}
     >
       <div className=" EnchartedBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />

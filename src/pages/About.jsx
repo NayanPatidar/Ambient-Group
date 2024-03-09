@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/about.css";
 import Navbar from "../components/navbar/nav";
 import Footer from "../components/footer/footer";
+import { DrawerContext } from "../Context/Drawer";
 
-function About({ isMouseOver, MouseClicked, handleHomeClick }) {
-  const handleClick = () => {
-    handleHomeClick(false);
+function About() {
+  const {
+    onTopPage,
+    setIsOnTopPage,
+    isDrawerAllowed,
+    isOnHover,
+    setIsOnHover,
+  } = useContext(DrawerContext);
+
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
+
   return (
     <div
       className={`AboutMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
-        ${isMouseOver ? "left-onHover" : ""}
-        ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}`}
+      onClick={() => handleTopPageClicked()}
     >
       <div className="AboutBackground flex flex-col bg-cover bg-center h-screen">
         <Navbar />
@@ -56,7 +67,10 @@ function About({ isMouseOver, MouseClicked, handleHomeClick }) {
           <h2 className=" font-md text-3xl font-sans text-gray-800">
             OUR BUILDINGS COMBINED ARE HOME TO
           </h2>
-          <div data-aos="fade-up" className=" flex lg:flex-row md:flex-row flex-col w-full mt-10">
+          <div
+            data-aos="fade-up"
+            className=" flex lg:flex-row md:flex-row flex-col w-full mt-10"
+          >
             <div className=" lg:w-1/6 md:w-1/6 h-32 border border-black border-t-0 border-r-0 pl-3">
               <p className=" text-sm">BUSINESSES</p>
               <div className=" text-2xl pt-5">109 </div>

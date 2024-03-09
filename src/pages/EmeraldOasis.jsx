@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/emrald.css";
 import { CiTimer } from "react-icons/ci";
 import Navbar from "../components/navbar/nav";
@@ -10,22 +10,26 @@ import { MdAir } from "react-icons/md";
 import { GiDoubleStreetLights } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 import Footer from "../components/footer/footer";
+import { DrawerContext } from "../Context/Drawer";
 
-export default function EmeraldOasisPage({
-  isMouseOver,
-  MouseClicked,
-  handleHomeClick,
-}) {
-  const handleClick = () => {
-    handleHomeClick(false);
+export default function EmeraldOasisPage() {
+  const {
+    onTopPage,
+    setIsOnTopPage,
+    isDrawerAllowed,
+    isOnHover,
+  } = useContext(DrawerContext);
+  const handleTopPageClicked = () => {
+    setIsOnTopPage(true);
   };
   return (
     <div
       className={`EmraldManorMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
-      ${isMouseOver ? "left-onHover" : ""}
-    ${MouseClicked ? "left-HideOn" : "left-HideOff"}`}
-      onClick={handleClick}
-    >
+      ${onTopPage ? "" : "HideOn"}
+      ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
+      ${isOnHover ? "onHover" : ""}`}
+      onClick={() => handleTopPageClicked()}
+      >
       <div className=" EmraldBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
 
@@ -33,7 +37,9 @@ export default function EmeraldOasisPage({
           data-aos="fade-up"
           className="line font-body font-thin text-white pt-48 w-4/6 pl-8 "
         >
-          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">EMERALD OASIS</h2>
+          <h2 className="titleLineUp font-thin text-xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-6xl">
+            EMERALD OASIS
+          </h2>
           <p className=" titleLineUp font-thin text-lg">
             Central Station, Sydney
           </p>

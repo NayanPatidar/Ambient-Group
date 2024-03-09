@@ -27,7 +27,7 @@ const TopPage = () => {
       ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
       ${isOnHover ? "onHover" : ""}
         `}
-      onClick={() => handleTopPageClicked()}
+        onClick={() => handleTopPageClicked()}
     >
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
