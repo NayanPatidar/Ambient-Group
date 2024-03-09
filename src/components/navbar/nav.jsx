@@ -14,11 +14,6 @@ const Navbar = ({ viewProperties }) => {
     window.location.href = `/${route}`;
   };
 
-  const viewListClicker = () => {
-    console.log("Clicker !!");
-    viewProperties(true);
-  };
-
   return (
     <div className="navigation-bar">
       <div className="flex flex-row justify-between items-center mt-8 ">
@@ -54,7 +49,7 @@ const Navbar = ({ viewProperties }) => {
                 <a>
                   <HiOutlineViewList
                     className=" scale-150"
-                    onClick={() => viewListClicker()}
+                    onClick={() => viewProperties(true)}
                   />
                 </a>
               ) : (
