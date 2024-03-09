@@ -3,7 +3,6 @@ import "../../styles/gallery.css";
 import { DrawerContext } from "../../Context/Drawer";
 
 const ImageGallery = ({ data }) => {
-
   const { onTopPage, setIsOnTopPage } = useContext(DrawerContext);
 
   const handleRedirect = (redirectLink) => {
@@ -25,11 +24,9 @@ const ImageGallery = ({ data }) => {
               />
             </div>
             <div
-              className=" flex flex-row w-full justify-around"
-              style={{
-                color: onTopPage ? "white" : "black",
-                transition: "background-color 0.3s ease",
-              }}
+              className={`flex flex-row w-full justify-around ${
+                onTopPage ? "blackText" : "whiteText"
+              }`}
             >
               <p className=" text-sm">{item.name}</p>
               <p className=" text-sm">{item.place}</p>

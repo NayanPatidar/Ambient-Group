@@ -1,5 +1,6 @@
 .imageDiv {
   overflow: hidden;
+  transform: ;
 }
 
 .imageDiv > img {
@@ -9,4 +10,22 @@
 .imageDiv:hover > img {
   transform: scale(1.25);
   filter: brightness(60%);
+}
+
+@media (min-width: 1180px) {
+  .blackText {
+    color: black;
+  }
+  .whiteText {
+    color: white;
+  }
+}
+
+@media (max-width: 1180px) {
+  .whiteText {
+    color: black;
+  }
+  .blackText {
+    color: white;
+  }
 }

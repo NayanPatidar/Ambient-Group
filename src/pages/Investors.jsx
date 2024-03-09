@@ -131,7 +131,7 @@ export default function Investors({
         <div data-aos="fade-up" className=" lg:text-4xl md:text-3xl text-xl mt-8">
           FEATURED ADVANTAGES
         </div>
-        <div className="mt-5 flex lg:flex-row md:flex-row flex-col w-full mt-24">
+        <div className="flex lg:flex-row md:flex-row flex-col w-full mt-24">
           <div
             data-aos="fade-up"
             className=" lg:w-1/3 md:w-1/3  flex flex-col p-6 border border-white border-b-0 border-r-0 border-l-black border-t-0"

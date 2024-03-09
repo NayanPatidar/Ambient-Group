@@ -11,8 +11,14 @@ export default function Properties({}) {
   const [selectedItem, setSelectedItem] = useState("ALL");
   const [selectedTypeProperty, setTypeProperty] = useState("ALL PROPERTIES");
   const matches = useMediaQuery("(min-width:1180px)");
-  const { onTopPage, setIsOnTopPage, setDrawerAllow, setIsOnHover } =
-    useContext(DrawerContext);
+  const {
+    onTopPage,
+    setIsOnTopPage,
+    isDrawerAllowed,
+    setDrawerAllow,
+    setIsOnHover,
+    isOnHover,
+  } = useContext(DrawerContext);
 
   const items = [
     "ALL",
@@ -76,9 +82,10 @@ export default function Properties({}) {
 
   return (
     <div
-      className="MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll "
+      className={`MainProperty w-screen h-screen fixed overflow-auto overflow-y-scroll 
+      ${onTopPage ? "Darken" : "ContentVisible"}
+      `}
       style={{
-        backgroundColor: onTopPage ? "black" : "#EB8B2E",
         transition: "background-color 0.3s ease",
       }}
       onClick={() => PropertyClick()}
@@ -106,8 +113,8 @@ export default function Properties({}) {
                     <GoDotFill className=" mb-8 w-8 rotate-90 text-2xl" />
                     <span
                       className={`propertiesMark w-26  rotate-90 
+                      ${isOnHover ? "GetUnderline" : ""}
                   `}
-                      // ${isMouseOver ? "GetUnderline" : ""}
                     >
                       PROPERTIES
                     </span>
