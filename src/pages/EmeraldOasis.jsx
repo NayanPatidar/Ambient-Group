@@ -104,7 +104,7 @@ export default function EmeraldOasisPage() {
           <img
             data-aos="fade-up"
             className=" h-96 self-end"
-            src="../../public/images/Sydney/Exterior.jpg"
+            src="/images/Sydney/Exterior.jpg"
             alt="Image 1"
           />
           <div className="flex flex-col justify-around">

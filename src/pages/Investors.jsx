@@ -68,7 +68,7 @@ export default function Investors() {
           <img
             data-aos="fade-up"
             className=" min-w-28"
-            src="../../public/images/Investors/Invest.jpg"
+            src="/images/Investors/Invest.jpg"
           />
         </div>
       </div>

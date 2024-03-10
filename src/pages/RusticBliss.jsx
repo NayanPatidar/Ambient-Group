@@ -116,7 +116,7 @@ export default function RusticBlissPage() {
             <img
               data-aos="fade-up"
               className=" self-end lg:w-1/2 md:w-1/2 mt-5 mb-5"
-              src="../../public/images/buenosAires/kitchen.jpg"
+              src="/images/buenosAires/kitchen.jpg"
               alt="Image 1"
             />
           </div>

@@ -106,7 +106,7 @@ export default function MoonlitMiragePage() {
         <div data-aos="fade-up" className=" mt-16">
           <img
             className="lg:w-1/2 md:w-1/2"
-            src="../../public/images/Singapore/kitchen.jpg"
+            src="/images/Singapore/kitchen.jpg"
             alt="Image 1"
           />
           <div className="flex flex-col justify-around">

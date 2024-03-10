@@ -81,7 +81,10 @@ const TopPage = () => {
             </div>
             <div>
               <div className="img-container bg-orange-600">
-                <img src="/public/images/Commercials/One.jpg" className="" />
+                <img
+                  src="/images/Commercials/One.jpg"
+                  alt="Commercial One"
+                />
               </div>
 
               <div className=" flex flex-col">
@@ -102,7 +105,7 @@ const TopPage = () => {
             </div>
             <div className="mr-5">
               <div className="img-container bg-orange-600 ">
-                <img src="/public/images/Commercials/Three.jpg" />
+                <img src="/images/Commercials/Three.jpg" />
               </div>
               <div className=" flex flex-col">
                 <p>SERENITY MANOR</p>
@@ -123,7 +126,7 @@ const TopPage = () => {
             </div>
             <div className="mr-4">
               <div className="img-container bg-orange-600">
-                <img src="/public/images/Commercials/Six.jpg" />
+                <img src="/images/Commercials/Six.jpg" />
               </div>
               <div className=" flex flex-col">
                 <p>CELESTIAL RETREAT</p>
@@ -143,7 +146,7 @@ const TopPage = () => {
             </div>
             <div>
               <div className="img-container bg-orange-600 ">
-                <img src="/public/images/Commercials/Four.jpg" />
+                <img src="/images/Commercials/Four.jpg" />
               </div>
 
               <div className=" flex flex-col">
@@ -165,7 +168,7 @@ const TopPage = () => {
             </div>
             <div data-aos="fade-up">
               <div className="img-container bg-orange-600 ">
-                <img src="/public/images/Commercials/Five.jpg" />
+                <img src="/images/Commercials/Five.jpg" />
               </div>
 
               <div className=" flex flex-col">
@@ -186,7 +189,7 @@ const TopPage = () => {
             </div>
             <div className="mr-5" data-aos="fade-up">
               <div className="img-container bg-orange-600">
-                <img src="/public/images/Commercials/Eight.jpg" />
+                <img src="/images/Commercials/Eight.jpg" />
               </div>
               <div className=" flex flex-col">
                 <p>GRANDEUR GROVE</p>
@@ -229,7 +232,7 @@ const TopPage = () => {
           of the people who occupy them
         </div>
         <div className="w-4/6 lg:pt-9 md:pt-9">
-          <img src="/public/images/HomePage/investor.jpg" />
+          <img src="/images/HomePage/investor.jpg" />
         </div>
       </div>
       <Footer />

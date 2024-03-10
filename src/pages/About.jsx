@@ -57,7 +57,7 @@ function About() {
           <img
             data-aos="fade-up"
             className=" lg:pt-16 md:pt-16 pt-8"
-            src="../../public/images/About/crowd.jpg"
+            src="/images/About/crowd.jpg"
           />
         </div>
       </div>
@@ -121,7 +121,7 @@ function About() {
         <div className="lg:w-2/5 md:w-2/5 lg:ml-10 md:ml-10 self-end flex flex-end flex-row justify-center mt-24">
           <img
             data-aos="fade-up"
-            src="../../public/images/About/imageabout.jpg"
+            src="/images/About/imageabout.jpg"
           />
         </div>
       </div>

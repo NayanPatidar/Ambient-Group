@@ -103,12 +103,12 @@ export default function TranquilRetreatPage() {
           </div>
         </div>
         <div data-aos="fade-up" className=" mt-16">
-          <img src="../../public/images/Tranquil/Exterior.jpg" alt="Image 1" />
+          <img src="/images/Tranquil/Exterior.jpg" alt="Image 1" />
           <div className="flex flex-col justify-around">
             <img
               data-aos="fade-up"
               className=" lg:w-1/2 md:w-1/2 w-full mt-5 mb-5"
-              src="../../public/images/Tranquil/TranquilInteriors.jpg"
+              src="/images/Tranquil/TranquilInteriors.jpg"
               alt="Image 1"
             />
           </div>

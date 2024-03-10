@@ -106,7 +106,7 @@ export default function HarmonyHavenPage() {
         <div data-aos="fade-up" className=" mt-16">
           <img
             data-aos="fade-up"
-            src="../../public/images/HarmonyHaven/House.jpg"
+            src="/images/HarmonyHaven/House.jpg"
             alt="Image 1"
           />
           <div className="flex flex-col justify-around">

@@ -108,12 +108,12 @@ export default function EnchartedPage() {
           </div>
         </div>
         <div data-aos="fade-up" className=" mt-16">
-          <img src="../../public/images/Hideway/Interior.jpg" alt="Image 1" />
+          <img src="/images/Hideway/Interior.jpg" alt="Image 1" />
           <div className="flex flex-col justify-around">
             <img
               data-aos="fade-up"
               className=" self-end lg:w-1/2 md:w-1/2 mt-5 mb-5"
-              src="../../public/images/Hideway/Interior2.jpg"
+              src="/images/Hideway/Interior2.jpg"
               alt="Image 1"
             />
           </div>
