@@ -63,11 +63,11 @@
 }
 
 @media (max-width: 1180px) {
-  .ContentVisible {
+  .Darken {
     background-color: #eb8b2e;
   }
 
-  .Darken {
+  .ContentVisible {
     background-color: black;
   }
 }

@@ -129,39 +129,39 @@ export default function PinesManorPage() {
               PROPERTY FEATURES
             </div>
             <div
-              data-aos="fade-up"
-              className=" flex flex-row justify-around mt-10"
+              // data-aos="fade-up"
+              className=" flex flex-row justify-start mt-10"
             >
-              <div className=" grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 gap-4 w-8/12 border border-black border-t-0 border-r-0 border-b-0 ">
+              <div className=" grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 gap-4 border border-black border-t-0 border-r-0 border-b-0 ">
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <CiTimer className=" mr-2" /> 24/7 Building Manager
+                  <CiTimer className=" w-10 mr-2" /> 24/7 Building Manager
                 </div>
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <CiWifiOn className=" mr-2" />
+                  <CiWifiOn className="w-10  mr-2" />
                   NBN & Fibre to the building
                 </div>
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <MdOutlineShower className=" mr-2" />
+                  <MdOutlineShower className="w-8  mr-2" />
                   Shower
                 </div>
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <LuParkingCircle className=" mr-2" />
+                  <LuParkingCircle className="w-8  mr-2" />
                   Parking & Storage
                 </div>
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <MdAir className=" mr-2" />
+                  <MdAir className="w-10 mr-2 pl-2" />
                   Individual Air Conditioning
                 </div>
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <LuSofa className=" mr-2" />
+                  <LuSofa className="w-10  mr-2" />
                   Private Commercial foyer and lift
                 </div>
                 <div className="pl-5 lg:text-lg md:text-lg text-sm text-gray-700 flex flex-row items-center">
-                  <GiDoubleStreetLights className=" mr-2" />
+                  <GiDoubleStreetLights className="w-10  mr-2" />
                   Street Frontage
                 </div>
               </div>
-              <div className=" lg:w-3/12 md:w-3/12 border border-black border-t-0 border-r-0 border-b-0"></div>
+              {/* <div className=" lg:w-3/12 md:w-3/12 border border-black border-t-0 border-r-0 border-b-0"></div> */}
             </div>
           </div>
         </div>
