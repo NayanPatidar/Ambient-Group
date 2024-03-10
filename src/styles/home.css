@@ -42,11 +42,8 @@
   0% {
     background-image: url(/public/images/HomePage/Three.jpg);
   }
-  30% {
+  50% {
     background-image: url(/public/images/HomePage/One.jpg);
-  }
-  80% {
-    background-image: url(/public/images/HomePage/Two.jpg);
   }
   100% {
     background-image: url(/public/images/HomePage/Three.jpg);
