@@ -100,7 +100,7 @@ const TopPage = () => {
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div className="mr-12">
+            <div className="mr-5">
               <div className="img-container bg-orange-600 ">
                 <img src="/public/images/Commercials/Three.jpg" />
               </div>
@@ -114,14 +114,14 @@ const TopPage = () => {
         <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-16">
           <div
             data-aos="fade-up"
-            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full pl-0 xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-16"
+            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-16"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div>
+            <div className="mr-4">
               <div className="img-container bg-orange-600">
                 <img src="/public/images/Commercials/Six.jpg" />
               </div>
@@ -163,7 +163,7 @@ const TopPage = () => {
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <div className="img-container bg-orange-600 ">
                 <img src="/public/images/Commercials/Five.jpg" />
               </div>
@@ -184,7 +184,7 @@ const TopPage = () => {
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div className="mr-10">
+            <div className="mr-5" data-aos="fade-up">
               <div className="img-container bg-orange-600">
                 <img src="/public/images/Commercials/Eight.jpg" />
               </div>
