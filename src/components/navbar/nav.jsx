@@ -19,11 +19,11 @@ const Navbar = ({}) => {
   const handleViewListClick = () => {
     setDrawerAllow(true);
   };
-  
+
   return (
     <div className="navigation-bar">
       <div className="flex flex-row justify-between items-center mt-8 ">
-        <div className="Title text-white font-thin cursor-pointer items-center self-center pl-3">
+        <div className="Title text-white font-thin cursor-pointer items-center self-center pl-10">
           <span className=" font-bold" onClick={HomePage}>
             AMBIENT
           </span>{" "}

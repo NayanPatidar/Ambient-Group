@@ -16,6 +16,15 @@ export default function Investors() {
   const handleTopPageClicked = () => {
     setIsOnTopPage(true);
   };
+
+  const handleScrollClick = () => {
+    console.log("Clicked on scroll");
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div
       className={`InvestorsMain flex flex-col justify-center items-center bg-white z-1 relative p-0 m-0          
@@ -57,7 +66,7 @@ export default function Investors() {
         </div>
         <div className="mt-10 md:w-2/5 lg:w-2/5 w-4/5 lg: md: self-center">
           <img
-            // data-aos="fade-up"
+            data-aos="fade-up"
             className=" min-w-28"
             src="../../public/images/Investors/Invest.jpg"
           />

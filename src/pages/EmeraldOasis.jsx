@@ -13,14 +13,19 @@ import Footer from "../components/footer/footer";
 import { DrawerContext } from "../Context/Drawer";
 
 export default function EmeraldOasisPage() {
-  const {
-    onTopPage,
-    setIsOnTopPage,
-    isDrawerAllowed,
-    isOnHover,
-  } = useContext(DrawerContext);
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, isOnHover } =
+    useContext(DrawerContext);
   const handleTopPageClicked = () => {
     setIsOnTopPage(true);
+  };
+
+  const handleScrollClick = () => {
+    console.log("Clicked on scroll");
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: "smooth",
+    });
   };
   return (
     <div
@@ -29,7 +34,7 @@ export default function EmeraldOasisPage() {
       ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
       ${isOnHover ? "onHover" : ""}`}
       onClick={() => handleTopPageClicked()}
-      >
+    >
       <div className=" EmraldBackground flex flex-col justify-between bg-cover bg-center h-screen w-full ">
         <Navbar />
 
@@ -46,7 +51,10 @@ export default function EmeraldOasisPage() {
         </div>
         <div className="flex flex-row items-center text-white text-xl gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
           <GoArrowDown />
-          <p className=" text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 ">
+          <p
+            className=" text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 "
+            onClick={() => handleScrollClick()}
+          >
             SCROLL TO SEE MORE
           </p>
         </div>

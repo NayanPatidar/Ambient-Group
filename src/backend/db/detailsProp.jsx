@@ -69,7 +69,7 @@ const detailsProperties = [
       "https://cdn.newsapi.com.au/image/v1/3f8c14285f8715123785e18658c5ca31?width=650",
     description: "Description for item 9 in SYDNEY",
     redirectLink: "/property/sydney/emeraldoasis",
-  }
+  },
 ];
 
 export default detailsProperties;

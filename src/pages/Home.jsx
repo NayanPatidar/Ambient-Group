@@ -8,15 +8,20 @@ import Footer from "../components/footer/footer";
 import { DrawerContext } from "../Context/Drawer";
 
 const TopPage = () => {
-  const {
-    onTopPage,
-    setIsOnTopPage,
-    isDrawerAllowed,
-    isOnHover,
-  } = useContext(DrawerContext);
+  const { onTopPage, setIsOnTopPage, isDrawerAllowed, isOnHover } =
+    useContext(DrawerContext);
 
   const handleTopPageClicked = () => {
     setIsOnTopPage(true);
+  };
+
+  const handleScrollClick = () => {
+    console.log("Clicked on scroll");
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -26,7 +31,7 @@ const TopPage = () => {
       ${isDrawerAllowed ? "DrawOn" : "DrawOff"}
       ${isOnHover ? "onHover" : ""}
         `}
-        onClick={() => handleTopPageClicked()}
+      onClick={() => handleTopPageClicked()}
     >
       <div className="MainBackground flex flex-col justify-between bg-cover bg-center h-screen ">
         <Navbar />
@@ -39,7 +44,10 @@ const TopPage = () => {
         </div>
         <div className=" flex flex-row items-center text-white gap-4 h-24 border border-white border-b-0 border-r-0 border-l-0 pl-8">
           <GoArrowDown />
-          <p className=" text-sm lg:text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300 ">
+          <p
+            className=" text-sm lg:text-xl underline underline-offset-8 decoration-1 decoration-transparent hover:decoration-white duration-300"
+            onClick={() => handleScrollClick()}
+          >
             SCROLL TO SEE MORE
           </p>
         </div>
