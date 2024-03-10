@@ -199,7 +199,7 @@ const TopPage = () => {
         data-aos="fade-up"
         className=" flex lg:flex-row md:flex-row flex-col justify-around h-96 mt-56 border-t border-black pt-16"
       >
-        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0 pt-10 ">
+        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0 mt-12 ">
           WHAT THEY SAY
         </div>
         <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4  h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm ml-8 pl-2 font-serif flex flex-col justify-between">
