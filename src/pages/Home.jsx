@@ -222,13 +222,13 @@ const TopPage = () => {
         </div>
       </div>
 
-      <div className=" bg-black h-96 w-full mt-24 flex flex-row p-9 justify-between">
-        <div className=" w-4/6 text-white lg:text-3xl md:text-2xl sm:text-2xl text-sm items-center pt-8 pr-6 leading-normal">
+      <div className=" bg-black h-96 w-full mt-24 flex lg:flex-row md:flex-row flex-col p-9 justify-between items-center">
+        <div className=" text-white lg:text-3xl md:text-2xl sm:text-2xl text-sm items-center pt-8 pr-2 leading-normal">
           We pride ourselves on owning and managing quality, legacy style assets
           designed to create long lasting communities and improve the wellbeing
           of the people who occupy them
         </div>
-        <div className="w-2/6 pt-9">
+        <div className="w-4/6 lg:pt-9 md:pt-9">
           <img src="/public/images/HomePage/investor.jpg" />
         </div>
       </div>

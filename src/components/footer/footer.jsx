@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div className=" flex flex-row justify-around h-96 w-full bg-black pt-16 border-white border-t z-10">
-      <div className="w-1/3 h-56 text-white flex flex-col justify-between pl-2">
+      <div className="w-1/3 h-56 text-white flex flex-col justify-between pl-3">
         <span className="font-bold lg:text-lg md:text-lg sm:text-lg text-xs">
           <span>AMBIENT</span> INTERIORS
         </span>
@@ -12,7 +12,7 @@ export default function Footer() {
           505959 <br></br>WEBSITE CRAFTED BY AMBIENT INTERIOR
         </div>
       </div>
-      <div className="w-1/3 h-56 border-l border-white lg:text-sm md:text-sm sm:text-sm text-xs text-white pl-5 font-medium flex flex-col justify-between">
+      <div className="w-1/3 h-56 border-l border-white lg:text-sm md:text-sm sm:text-sm text-xs text-white pl-3 font-medium flex flex-col justify-between">
         <div>
           <p className=" pb-3">GET IN TOUCH </p>
           <p className="font-serif">
@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <a className="text-orange-400">VIVEK, MD </a>
       </div>
-      <div className="w-1/3 h-56 border-l border-white lg:text-sm md:text-sm sm:text-sm   text-xs text-white pl-5 font-medium flex flex-col justify-between">
+      <div className="w-1/3 h-56 border-l border-white lg:text-sm md:text-sm sm:text-sm   text-xs text-white pl-3 font-medium flex flex-col justify-between">
         <div>
           <p className=" pb-3">ENQUIRIES</p>
           <p className="font-serif">General enquiries</p>
