@@ -35,19 +35,7 @@
 }
 
 .MainBackground {
-  animation: change 30s infinite ease-in-out;
-}
-
-@keyframes change {
-  0% {
-    background-image: url(/public/images/HomePage/Three.jpg);
-  }
-  50% {
-    background-image: url(/public/images/HomePage/One.jpg);
-  }
-  100% {
-    background-image: url(/public/images/HomePage/Three.jpg);
-  }
+  background-image: url(/public/images/HomePage/Three.jpg);
 }
 
 .img-container {
