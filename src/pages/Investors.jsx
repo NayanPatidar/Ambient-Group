@@ -91,7 +91,7 @@ export default function Investors() {
       <div className=" w-full lg:h-96 flex lg:flex-row md:flex-row flex-col justify-around p-10 gap-1">
         <div
           data-aos="fade-up"
-          className=" lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="mb-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             1
@@ -104,7 +104,7 @@ export default function Investors() {
         </div>
         <div
           data-aos="fade-up"
-          className="mt-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="mb-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             2
@@ -119,7 +119,7 @@ export default function Investors() {
         </div>
         <div
           data-aos="fade-up"
-          className="mt-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="mb-5 lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             3
@@ -132,7 +132,7 @@ export default function Investors() {
         </div>
         <div
           data-aos="fade-up"
-          className="mt-5  lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
+          className="lg:w-1/4 md:w-1/4  border border-white border-b-0 border-r-0 border-l-0 border-t-black"
         >
           <div className="w-10 h-10 bg-orange-500 -translate-y-5 -translate-x-5 rounded-full pl-4 pt-2">
             4

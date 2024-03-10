@@ -69,7 +69,7 @@ const TopPage = () => {
       </div>
 
       <div className="flex flex-col w-11/12">
-        <div className=" flex lg:flex-row md:flex-row flex-col justify-between">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-16">
           <div
             data-aos="fade-up"
             className="flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full"
@@ -81,10 +81,7 @@ const TopPage = () => {
             </div>
             <div>
               <div className="img-container bg-orange-600">
-                <img
-                  src="/images/Commercials/One.jpg"
-                  alt="Commercial One"
-                />
+                <img src="/images/Commercials/One.jpg" alt="Commercial One" />
               </div>
 
               <div className=" flex flex-col">
@@ -117,14 +114,15 @@ const TopPage = () => {
         <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-16">
           <div
             data-aos="fade-up"
-            className=" flex flex-row justify-around lg:w-5/12 md:w-5/12 sm:w-6/12 w-full xs:mt-10 lg:mt-0 md:mt-0 sm:mt-0 mt-16"
+            className=" flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full"
           >
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div className="mr-4">
+
+            <div className="mr-10">
               <div className="img-container bg-orange-600">
                 <img src="/images/Commercials/Six.jpg" />
               </div>
@@ -157,16 +155,13 @@ const TopPage = () => {
           </div>
         </div>
         <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-16">
-          <div
-            data-aos="fade-up"
-            className="flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full"
-          >
+          <div className="flex flex-row justify-around lg:w-6/12 md:w-6/12 sm:w-6/12 w-full">
             <div className=" w-4 mt-20">
               <p className=" -rotate-90">
                 <a className="text-orange-400">COMMERCIAL </a>
               </p>
             </div>
-            <div data-aos="fade-up">
+            <div>
               <div className="img-container bg-orange-600 ">
                 <img src="/images/Commercials/Five.jpg" />
               </div>
@@ -204,7 +199,7 @@ const TopPage = () => {
         data-aos="fade-up"
         className=" flex lg:flex-row md:flex-row flex-col justify-around h-96 mt-56 border-t border-black pt-16"
       >
-        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0  ">
+        <div className="lg:w-1/4 md:w-1/4 h-80 text-center border-black lg: md:border-b-0 pt-10 ">
           WHAT THEY SAY
         </div>
         <div className=" mt-10 mb-5 lg:w-1/4 md:w-1/4 w-3/4  h-72 border-l lg:border-b-0 md:border-b-0 border-b border-black lg:text-xl md:text-xl text-sm ml-8 pl-2 font-serif flex flex-col justify-between">
