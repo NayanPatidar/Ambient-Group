@@ -93,7 +93,7 @@ export default function Properties({}) {
       onMouseLeave={() => MouseLeave()}
     >
       <div className=" flex flex-row justify-end">
-        <div className=" flex flex-col justify-between">
+        <div className=" flex flex-col justify-between lg:w-9/12 md:w-9/12">
           <div className=" flex flex-row justify-between text-black text-xl font-medium mt-8">
             {!matches ? (
               <span>
@@ -106,7 +106,7 @@ export default function Properties({}) {
             <div className="flex w-11/12 text-white pl-5 h-8">
               OUR PROPERTIES
             </div>
-            <div className=" mt-1">
+            <div className=" mt-1 ">
               <div>
                 {matches ? (
                   <div className="PropHeadingDetails w-7 flex flex-col justify-start items-center text-sm mr-8  ">
@@ -123,7 +123,6 @@ export default function Properties({}) {
               </div>
             </div>
           </div>
-
           <div className=" flex flex-col gap-4 text-md font-semidark p-6">
             <div>
               <ul>
@@ -182,7 +181,7 @@ export default function Properties({}) {
               </ul>
             </div>
           </div>
-          <div className="mb-10">
+          <div className=" mb-10">
             <ImageGallery data={filterImages()} />
           </div>
         </div>
