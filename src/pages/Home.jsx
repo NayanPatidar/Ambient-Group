@@ -66,7 +66,7 @@ const TopPage = () => {
           <a className="text-orange-400">commercial</a> opportunities with us.
         </div>
         <button className=" w-11/12 text-sm lg:w-60 md:w-60 h-10 bg-black text-white mt-8 font-medium">
-          ABOUT AMBIENT GROUP
+          <a href="/about">ABOUT AMBIENT GROUP</a>
         </button>
       </div>
 
@@ -117,7 +117,7 @@ const TopPage = () => {
             ""
           )}
         </div>
-        <div className=" flex lg:flex-row md:flex-row flex-col justify-between ">
+        <div className=" flex lg:flex-row md:flex-row flex-col justify-between mt-8">
           {matches ? (
             <div
               data-aos="fade-up"
